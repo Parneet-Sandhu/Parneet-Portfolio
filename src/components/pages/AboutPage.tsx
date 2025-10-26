@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Code2, Coffee, Music, Palette, Sparkles } from "lucide-react";
+import { ScrapbookCard, PushPin, WashiTape, PaperClip, FloatingSticker } from "@/components/ScrapbookDecorations";
 
 export const AboutPage = () => {
   const interests = [
@@ -32,11 +33,16 @@ export const AboutPage = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
+          className="relative"
         >
-          <Card className="p-8 bg-card border-4 border-accent/20 shadow-xl relative overflow-hidden">
-            {/* Decorative corner stickers */}
-            <div className="absolute top-4 right-4 text-3xl animate-bounce-soft">⭐</div>
-            <div className="absolute bottom-4 left-4 text-3xl animate-float">💖</div>
+          <ScrapbookCard className="p-8 bg-card shadow-scrapbook" rotation={-1}>
+            <PushPin className="top-4 right-6" />
+            <PaperClip className="top-6 left-6" />
+            <WashiTape className="top-0 right-1/4 w-1/3 rotate-[2deg]" color="primary" />
+            
+            {/* Decorative stickers */}
+            <FloatingSticker emoji="⭐" className="-top-4 left-1/3" delay={0.4} />
+            <FloatingSticker emoji="💖" className="-bottom-6 right-12" delay={0.6} />
 
             <div className="space-y-6">
               {/* Intro */}
@@ -108,7 +114,7 @@ export const AboutPage = () => {
                 </p>
               </motion.div>
             </div>
-          </Card>
+          </ScrapbookCard>
         </motion.div>
 
         {/* Quote */}

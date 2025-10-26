@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Camera, Book, Gamepad2, Plane, Sparkles, Coffee } from "lucide-react";
+import { ScrapbookCard, PushPin, WashiTape, PaperClip, FloatingSticker } from "@/components/ScrapbookDecorations";
 
 export const InterestsPage = () => {
   const interests = [
@@ -91,12 +92,21 @@ export const InterestsPage = () => {
                 animate={{ opacity: 1, scale: 1, rotate: 0 }}
                 transition={{ delay: 0.1 + index * 0.1 }}
                 whileHover={{ scale: 1.05, rotate: 0 }}
+                className="relative"
               >
-                <Card className={`${interest.color} border-4 border-accent/20 shadow-xl p-6 h-full relative overflow-hidden`}>
-                  {/* Decorative element */}
-                  <div className="absolute -top-4 -right-4 text-7xl opacity-20">
-                    {interest.emoji}
-                  </div>
+                <ScrapbookCard 
+                  className={`${interest.color} shadow-scrapbook p-6 h-full`}
+                  rotation={[-2, 1, -1, 2, -1.5, 1.5][index % 6]}
+                >
+                  {index % 3 === 0 && <PushPin className="top-2 right-4" />}
+                  {index % 3 === 1 && <PaperClip className="top-2 left-4" />}
+                  {index % 3 === 2 && <WashiTape className="top-0 left-1/4 w-1/2" color="primary" />}
+                  
+                  <FloatingSticker 
+                    emoji={interest.emoji} 
+                    className={`${index % 2 === 0 ? '-top-8 -right-8 text-7xl' : '-top-6 -right-6 text-6xl'} opacity-20`} 
+                    delay={0.3 + index * 0.1} 
+                  />
 
                   <div className="relative z-10 space-y-4">
                     {/* Icon and Title */}
@@ -124,7 +134,7 @@ export const InterestsPage = () => {
                       ))}
                     </div>
                   </div>
-                </Card>
+                </ScrapbookCard>
               </motion.div>
             );
           })}

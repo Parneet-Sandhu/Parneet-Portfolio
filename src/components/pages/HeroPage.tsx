@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-workspace.jpg";
 import { Button } from "@/components/ui/button";
 import { Sparkles, ArrowRight } from "lucide-react";
+import { FloatingSticker, PushPin, WashiTape } from "@/components/ScrapbookDecorations";
 
 interface HeroPageProps {
   onNavigate: (page: number) => void;
@@ -10,28 +11,14 @@ interface HeroPageProps {
 export const HeroPage = ({ onNavigate }: HeroPageProps) => {
   return (
     <div className="min-h-screen flex items-center justify-center p-4 overflow-hidden relative">
-      {/* Floating decorations */}
-      <motion.div
-        className="absolute top-20 left-10 text-6xl opacity-20"
-        animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
-        transition={{ duration: 4, repeat: Infinity }}
-      >
-        ⭐
-      </motion.div>
-      <motion.div
-        className="absolute bottom-20 right-10 text-6xl opacity-20"
-        animate={{ y: [0, 20, 0], rotate: [0, -10, 0] }}
-        transition={{ duration: 3, repeat: Infinity }}
-      >
-        💖
-      </motion.div>
-      <motion.div
-        className="absolute top-1/3 right-20 text-5xl opacity-20"
-        animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
-        transition={{ duration: 8, repeat: Infinity }}
-      >
-        ✨
-      </motion.div>
+      {/* Enhanced Floating decorations */}
+      <FloatingSticker emoji="⭐" className="top-20 left-10" delay={0} />
+      <FloatingSticker emoji="💖" className="bottom-20 right-10" delay={0.2} />
+      <FloatingSticker emoji="✨" className="top-1/3 right-20" delay={0.4} />
+      <FloatingSticker emoji="🌸" className="bottom-32 left-20" delay={0.6} />
+      <FloatingSticker emoji="🎀" className="top-1/4 right-1/4" delay={0.8} />
+      <FloatingSticker emoji="💫" className="bottom-1/4 left-1/3" delay={1} />
+      <FloatingSticker emoji="🦋" className="top-1/2 left-12" delay={1.2} />
 
       <div className="container max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -109,49 +96,49 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
             </motion.div>
           </motion.div>
 
-          {/* Right side - Image with scrapbook style */}
+          {/* Right side - Enhanced scrapbook polaroid */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <motion.div
-              className="relative"
-              animate={{ rotate: [-2, 2, -2] }}
-              transition={{ duration: 5, repeat: Infinity }}
-            >
-              {/* Polaroid-style frame */}
-              <div className="bg-white p-4 rounded-lg shadow-2xl rotate-2 border-4 border-white">
-                <img
-                  src={heroImage}
-                  alt="Creative workspace"
-                  className="w-full h-auto rounded-md"
-                />
-                <p className="mt-4 text-center font-handwriting text-xl text-gray-700">
-                  my happy place ☕️💻
-                </p>
-              </div>
+            {/* Paper stack effect */}
+            <div className="paper-stack relative">
+              <motion.div
+                className="relative"
+                animate={{ rotate: [-1, 1, -1] }}
+                transition={{ duration: 5, repeat: Infinity }}
+              >
+                {/* Polaroid with torn edges */}
+                <div className="bg-white p-6 shadow-scrapbook rotate-2 border-0 relative torn-edge">
+                  <PushPin className="top-2 right-4" />
+                  <WashiTape className="top-0 left-1/4 w-1/2 rotate-[-3deg]" color="accent" />
+                  
+                  <img
+                    src={heroImage}
+                    alt="Creative workspace"
+                    className="w-full h-auto"
+                  />
+                  <p className="mt-4 text-center font-handwriting text-2xl text-gray-700">
+                    my happy place ☕️💻
+                  </p>
+                  
+                  {/* Decorative stickers on polaroid */}
+                  <div className="absolute -bottom-4 -left-4 text-4xl sticker-shadow">
+                    🌟
+                  </div>
+                  <div className="absolute -top-6 -right-6 text-3xl sticker-shadow rotate-12">
+                    💕
+                  </div>
+                </div>
+              </motion.div>
 
-              {/* Decorative tape */}
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-8 bg-accent/50 rotate-[-5deg] blur-[1px]"></div>
-            </motion.div>
-
-            {/* Floating stickers */}
-            <motion.div
-              className="absolute -top-8 -left-8 text-5xl"
-              animate={{ rotate: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              💫
-            </motion.div>
-            <motion.div
-              className="absolute -bottom-6 -right-6 text-5xl"
-              animate={{ rotate: [0, -10, 0] }}
-              transition={{ duration: 2.5, repeat: Infinity }}
-            >
-              🌸
-            </motion.div>
+              {/* More floating decorations */}
+              <FloatingSticker emoji="💫" className="-top-8 -left-8" delay={0.5} />
+              <FloatingSticker emoji="🌸" className="-bottom-6 -right-6" delay={0.7} />
+              <FloatingSticker emoji="✨" className="top-1/4 -left-12" delay={0.9} />
+            </div>
           </motion.div>
         </div>
       </div>

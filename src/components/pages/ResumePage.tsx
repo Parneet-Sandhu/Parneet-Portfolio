@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Download, Eye, FileText, Sparkles } from "lucide-react";
+import { ScrapbookCard, PushPin, WashiTape, FloatingSticker } from "@/components/ScrapbookDecorations";
 
 export const ResumePage = () => {
   const resumeHighlights = [
@@ -50,11 +51,16 @@ export const ResumePage = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
+          className="relative"
         >
-          <Card className="p-8 md:p-12 bg-card border-4 border-accent/20 shadow-2xl relative overflow-hidden">
-            {/* Decorative elements */}
-            <div className="absolute top-4 right-4 text-5xl opacity-10 animate-spin-slow">✨</div>
-            <div className="absolute bottom-4 left-4 text-5xl opacity-10 animate-float">📄</div>
+          <ScrapbookCard className="p-8 md:p-12 bg-card shadow-scrapbook paper-stack" rotation={0}>
+            <PushPin className="top-6 right-8" />
+            <PushPin className="top-6 left-8" />
+            <WashiTape className="top-0 left-1/4 w-1/2 rotate-1" color="primary" />
+            
+            <FloatingSticker emoji="📄" className="-bottom-6 -left-6" delay={0.3} />
+            <FloatingSticker emoji="✨" className="-top-4 -right-8" delay={0.5} />
+            <FloatingSticker emoji="🌟" className="bottom-1/4 -right-8" delay={0.7} />
 
             <div className="space-y-8">
               {/* Header Section */}
@@ -121,7 +127,7 @@ export const ResumePage = () => {
                 </Button>
               </motion.div>
             </div>
-          </Card>
+          </ScrapbookCard>
         </motion.div>
 
         {/* Additional Info Cards */}

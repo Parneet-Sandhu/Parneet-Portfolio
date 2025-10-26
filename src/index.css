@@ -95,6 +95,163 @@ All colors MUST be HSL.
   }
 }
 
+/* Scrapbook Effects */
+@layer utilities {
+  .torn-edge {
+    clip-path: polygon(
+      0% 0%, 2% 1%, 4% 0%, 6% 2%, 8% 1%, 10% 0%, 12% 2%, 14% 1%, 16% 0%, 18% 2%,
+      20% 1%, 22% 0%, 24% 2%, 26% 1%, 28% 0%, 30% 2%, 32% 1%, 34% 0%, 36% 2%,
+      38% 1%, 40% 0%, 42% 2%, 44% 1%, 46% 0%, 48% 2%, 50% 1%, 52% 0%, 54% 2%,
+      56% 1%, 58% 0%, 60% 2%, 62% 1%, 64% 0%, 66% 2%, 68% 1%, 70% 0%, 72% 2%,
+      74% 1%, 76% 0%, 78% 2%, 80% 1%, 82% 0%, 84% 2%, 86% 1%, 88% 0%, 90% 2%,
+      92% 1%, 94% 0%, 96% 2%, 98% 1%, 100% 0%,
+      100% 100%, 98% 99%, 96% 100%, 94% 98%, 92% 99%, 90% 100%, 88% 98%, 86% 99%,
+      84% 100%, 82% 98%, 80% 99%, 78% 100%, 76% 98%, 74% 99%, 72% 100%, 70% 98%,
+      68% 99%, 66% 100%, 64% 98%, 62% 99%, 60% 100%, 58% 98%, 56% 99%, 54% 100%,
+      52% 98%, 50% 99%, 48% 100%, 46% 98%, 44% 99%, 42% 100%, 40% 98%, 38% 99%,
+      36% 100%, 34% 98%, 32% 99%, 30% 100%, 28% 98%, 26% 99%, 24% 100%, 22% 98%,
+      20% 99%, 18% 100%, 16% 98%, 14% 99%, 12% 100%, 10% 98%, 8% 99%, 6% 100%,
+      4% 98%, 2% 99%, 0% 100%
+    );
+  }
+
+  .washi-tape {
+    position: relative;
+  }
+  
+  .washi-tape::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 16px;
+    background: linear-gradient(90deg, 
+      hsl(var(--primary) / 0.3) 0%, 
+      hsl(var(--accent) / 0.4) 50%, 
+      hsl(var(--primary) / 0.3) 100%
+    );
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .push-pin {
+    position: relative;
+  }
+
+  .push-pin::after {
+    content: '📌';
+    position: absolute;
+    top: -12px;
+    right: 12px;
+    font-size: 1.5rem;
+    transform: rotate(45deg);
+  }
+
+  .paper-clip {
+    position: relative;
+  }
+
+  .paper-clip::before {
+    content: '📎';
+    position: absolute;
+    top: -8px;
+    left: 12px;
+    font-size: 1.2rem;
+    transform: rotate(-15deg);
+  }
+
+  .grid-paper {
+    background-image: 
+      linear-gradient(hsl(var(--primary) / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .notebook-lines {
+    background-image: repeating-linear-gradient(
+      transparent,
+      transparent 29px,
+      hsl(var(--primary) / 0.1) 29px,
+      hsl(var(--primary) / 0.1) 30px
+    );
+  }
+
+  .spiral-binding {
+    position: relative;
+  }
+
+  .spiral-binding::before {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: repeating-linear-gradient(
+      transparent,
+      transparent 10px,
+      hsl(var(--muted)) 10px,
+      hsl(var(--muted)) 12px
+    );
+    border-left: 2px solid hsl(var(--muted));
+  }
+
+  .hand-drawn-circle {
+    position: relative;
+  }
+
+  .hand-drawn-circle::after {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border: 2px solid hsl(var(--primary) / 0.4);
+    border-radius: 50%;
+    transform: rotate(-5deg);
+  }
+
+  .corner-fold {
+    position: relative;
+  }
+
+  .corner-fold::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 30px 30px 0;
+    border-color: transparent hsl(var(--background)) transparent transparent;
+    filter: drop-shadow(-2px 2px 2px rgba(0,0,0,0.1));
+  }
+
+  .sticker-shadow {
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.15));
+  }
+
+  .paper-stack {
+    position: relative;
+  }
+
+  .paper-stack::before,
+  .paper-stack::after {
+    content: '';
+    position: absolute;
+    inset: 4px -4px -4px 4px;
+    background: hsl(var(--card));
+    border: 2px solid hsl(var(--border));
+    z-index: -1;
+  }
+
+  .paper-stack::after {
+    inset: 8px -8px -8px 8px;
+    opacity: 0.7;
+  }
+}
+
 @layer base {
   * {
     @apply border-border;

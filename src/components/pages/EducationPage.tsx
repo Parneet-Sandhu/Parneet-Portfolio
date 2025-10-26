@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { GraduationCap, BookOpen, Award } from "lucide-react";
+import { ScrapbookCard, PushPin, WashiTape, FloatingSticker } from "@/components/ScrapbookDecorations";
 
 export const EducationPage = () => {
   const education = [
@@ -56,12 +57,20 @@ export const EducationPage = () => {
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 + index * 0.2 }}
+              className="relative"
             >
-              <Card className="p-6 md:p-8 bg-card border-4 border-accent/20 shadow-xl relative overflow-hidden hover:shadow-2xl transition-shadow">
-                {/* Decorative elements */}
-                <div className="absolute top-4 right-4 text-4xl opacity-20">
-                  {index === 0 ? "🎓" : "📖"}
-                </div>
+              <ScrapbookCard 
+                className="p-6 md:p-8 bg-card shadow-scrapbook" 
+                rotation={index % 2 === 0 ? -0.5 : 0.5}
+              >
+                <PushPin className={`top-4 ${index % 2 === 0 ? 'right-8' : 'left-8'}`} />
+                <WashiTape className={`top-0 w-1/3 ${index % 2 === 0 ? 'left-1/4' : 'right-1/4'} rotate-[${index % 2 === 0 ? '-2' : '2'}deg]`} color={index % 2 === 0 ? "primary" : "accent"} />
+                
+                <FloatingSticker 
+                  emoji={index === 0 ? "🎓" : "📖"} 
+                  className={`-top-6 ${index % 2 === 0 ? '-right-6' : '-left-6'}`} 
+                  delay={0.4 + index * 0.2} 
+                />
 
                 <div className="space-y-4">
                   {/* Degree and Period */}
@@ -116,7 +125,7 @@ export const EducationPage = () => {
                     </ul>
                   </div>
                 </div>
-              </Card>
+              </ScrapbookCard>
             </motion.div>
           ))}
         </div>

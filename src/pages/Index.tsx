@@ -34,26 +34,60 @@ const Index = () => {
     <div className="min-h-screen bg-background font-display overflow-x-hidden">
       <Navigation currentPage={currentPage} setCurrentPage={setCurrentPage} />
       
-      <main className="pt-20">
+      <main className="pt-20 grid-paper min-h-screen">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentPage}
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
+            initial={{ 
+              opacity: 0, 
+              rotateY: -45,
+              x: "100%",
+              scale: 0.8,
+            }}
+            animate={{ 
+              opacity: 1, 
+              rotateY: 0,
+              x: 0,
+              scale: 1,
+            }}
+            exit={{ 
+              opacity: 0, 
+              rotateY: 45,
+              x: "-100%",
+              scale: 0.8,
+            }}
+            transition={{ 
+              duration: 0.6, 
+              ease: [0.43, 0.13, 0.23, 0.96],
+            }}
+            style={{ 
+              transformStyle: "preserve-3d",
+              perspective: 1000,
+            }}
           >
             {pages[currentPage]}
           </motion.div>
         </AnimatePresence>
       </main>
 
-      {/* Floating decorations */}
-      <div className="fixed bottom-8 right-8 text-4xl animate-bounce-soft pointer-events-none opacity-30 hidden lg:block">
+      {/* Floating decorations - more scattered and varied */}
+      <div className="fixed bottom-8 right-8 text-5xl animate-bounce-soft pointer-events-none opacity-40 hidden lg:block sticker-shadow">
         ✨
       </div>
-      <div className="fixed top-32 left-8 text-3xl animate-float pointer-events-none opacity-20 hidden lg:block">
+      <div className="fixed top-32 left-8 text-4xl animate-float pointer-events-none opacity-35 hidden lg:block sticker-shadow">
         💫
+      </div>
+      <div className="fixed top-1/3 right-12 text-3xl animate-wiggle pointer-events-none opacity-30 hidden lg:block sticker-shadow">
+        🌸
+      </div>
+      <div className="fixed bottom-1/4 left-16 text-4xl animate-float pointer-events-none opacity-35 hidden lg:block sticker-shadow" style={{ animationDelay: "1s" }}>
+        💖
+      </div>
+      <div className="fixed top-2/3 right-24 text-3xl animate-bounce-soft pointer-events-none opacity-30 hidden lg:block sticker-shadow" style={{ animationDelay: "0.5s" }}>
+        🎀
+      </div>
+      <div className="fixed bottom-1/2 left-1/4 text-2xl animate-float pointer-events-none opacity-25 hidden lg:block sticker-shadow" style={{ animationDelay: "1.5s" }}>
+        ⭐
       </div>
     </div>
   );

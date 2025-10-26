@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import { ScrapbookCard, PushPin, WashiTape, PaperClip, FloatingSticker } from "@/components/ScrapbookDecorations";
 
 export const ProjectsPage = () => {
   const projects = [
@@ -87,11 +88,22 @@ export const ProjectsPage = () => {
               animate={{ opacity: 1, y: 0, rotate: 0 }}
               transition={{ delay: 0.1 + index * 0.1 }}
               whileHover={{ scale: 1.05, rotate: 0 }}
-              className="group"
+              className="group relative"
             >
-              <Card className={`${project.color} border-4 border-accent/20 shadow-xl overflow-hidden h-full flex flex-col relative`}>
-                {/* Decorative tape effect */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-4 bg-accent/40 -translate-y-1"></div>
+              <ScrapbookCard 
+                className={`${project.color} shadow-scrapbook overflow-hidden h-full flex flex-col`}
+                rotation={[-2, 0, 2, -1.5, 1.5, -1][index % 6]}
+              >
+                {/* Scrapbook decorations */}
+                {index % 3 === 0 && <PushPin className="top-2 right-4" />}
+                {index % 3 === 1 && <PaperClip className="top-2 left-4" />}
+                {index % 3 === 2 && <WashiTape className="top-0 left-1/4 w-1/2" color="accent" />}
+                
+                <FloatingSticker 
+                  emoji={["🌟", "✨", "💖", "⭐", "💫", "🎀"][index % 6]} 
+                  className={`${index % 2 === 0 ? '-top-4 -right-4' : '-top-4 -left-4'}`} 
+                  delay={0.3 + index * 0.1} 
+                />
 
                 {/* Image/Icon Section */}
                 <div className="relative bg-card p-8 flex items-center justify-center">
@@ -147,7 +159,7 @@ export const ProjectsPage = () => {
                     </Button>
                   </div>
                 </div>
-              </Card>
+              </ScrapbookCard>
             </motion.div>
           ))}
         </div>

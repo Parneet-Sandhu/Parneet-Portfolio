@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Briefcase, Calendar, MapPin } from "lucide-react";
+import { ScrapbookCard, PushPin, WashiTape, PaperClip, FloatingSticker } from "@/components/ScrapbookDecorations";
 
 export const ExperiencePage = () => {
   const experiences = [
@@ -71,13 +72,30 @@ export const ExperiencePage = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 + index * 0.15 }}
+              className="relative"
             >
-              <Card className="p-6 md:p-8 bg-card border-4 border-accent/20 shadow-xl relative overflow-hidden hover:shadow-2xl transition-all hover:scale-[1.02]">
-                {/* Decorative corner */}
-                <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full"></div>
-                <div className="absolute -top-2 -right-2 text-4xl animate-float">
-                  {index === 0 ? "💼" : index === 1 ? "💻" : "🎯"}
-                </div>
+              <ScrapbookCard 
+                className="p-6 md:p-8 bg-card shadow-scrapbook hover:shadow-paper transition-all" 
+                rotation={[-0.5, 0.5, -0.5][index % 3]}
+              >
+                {/* Scrapbook decorations */}
+                {index % 2 === 0 ? (
+                  <>
+                    <PushPin className="top-4 right-6" />
+                    <PaperClip className="top-6 left-6" />
+                  </>
+                ) : (
+                  <>
+                    <PushPin className="top-4 left-6" />
+                    <WashiTape className="top-0 right-1/4 w-1/3" color="accent" />
+                  </>
+                )}
+                
+                <FloatingSticker 
+                  emoji={index === 0 ? "💼" : index === 1 ? "💻" : "🎯"} 
+                  className={`-top-4 ${index % 2 === 0 ? '-right-4' : '-left-4'}`} 
+                  delay={0.3 + index * 0.1} 
+                />
 
                 <div className="space-y-4">
                   {/* Role and Company */}
@@ -143,7 +161,7 @@ export const ExperiencePage = () => {
                     ))}
                   </div>
                 </div>
-              </Card>
+              </ScrapbookCard>
             </motion.div>
           ))}
         </div>

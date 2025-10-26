@@ -111,6 +111,11 @@ export default {
         'handwriting': ['Caveat', 'cursive'],
         'display': ['Quicksand', 'sans-serif'],
       },
+      boxShadow: {
+        'scrapbook': '4px 4px 0px rgba(0,0,0,0.1), 8px 8px 0px rgba(0,0,0,0.05)',
+        'sticker': '2px 4px 8px rgba(0,0,0,0.15)',
+        'paper': '0 8px 16px rgba(0,0,0,0.1)',
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

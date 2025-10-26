@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Github, Linkedin, Twitter, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import { ScrapbookCard, PushPin, WashiTape, PaperClip, FloatingSticker } from "@/components/ScrapbookDecorations";
 
 export const ContactPage = () => {
   const { toast } = useToast();
@@ -82,8 +83,19 @@ export const ContactPage = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
+            className="relative"
           >
-            <Card className="p-6 md:p-8 bg-card border-4 border-accent/20 shadow-xl">
+            <ScrapbookCard className="p-6 md:p-8 bg-card shadow-scrapbook" rotation={-1}>
+              <PushPin className="top-4 right-6" />
+              <WashiTape className="top-0 left-1/4 w-1/2 rotate-1" color="primary" />
+              <FloatingSticker emoji="✉️" className="-top-6 -left-6" delay={0.4} />
+              
+              {/* Spiral binding effect */}
+              <div className="absolute left-0 top-0 bottom-0 w-6 flex flex-col items-center justify-around py-8">
+                {[...Array(8)].map((_, i) => (
+                  <div key={i} className="w-3 h-3 rounded-full bg-muted border border-muted-foreground/20"></div>
+                ))}
+              </div>
               <h3 className="text-3xl font-handwriting font-bold text-primary mb-6">
                 Send me a message ✉️
               </h3>
@@ -132,7 +144,7 @@ export const ContactPage = () => {
                   Send Message
                 </Button>
               </form>
-            </Card>
+            </ScrapbookCard>
           </motion.div>
 
           {/* Social Links */}

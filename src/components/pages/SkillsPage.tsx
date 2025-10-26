@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Code2, Wrench, Package } from "lucide-react";
+import { ScrapbookCard, PushPin, WashiTape, FloatingSticker } from "@/components/ScrapbookDecorations";
 
 export const SkillsPage = () => {
   const skillCategories = [
@@ -75,8 +76,22 @@ export const SkillsPage = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2 + categoryIndex * 0.1 }}
+                className="relative"
               >
-                <Card className={`p-6 ${category.bgColor} border-4 border-accent/20 shadow-xl hover:shadow-2xl transition-all h-full`}>
+                <ScrapbookCard 
+                  className={`p-6 ${category.bgColor} shadow-scrapbook hover:shadow-paper transition-all h-full`}
+                  rotation={[-1, 0, 1][categoryIndex % 3]}
+                >
+                  <PushPin className={`top-2 ${categoryIndex % 2 === 0 ? 'right-4' : 'left-4'}`} />
+                  {categoryIndex % 2 === 0 && (
+                    <WashiTape className="top-0 left-1/3 w-1/3" color="accent" />
+                  )}
+                  
+                  <FloatingSticker 
+                    emoji={["✨", "💫", "⭐"][categoryIndex % 3]} 
+                    className={`-top-4 ${categoryIndex % 2 === 0 ? '-right-4' : '-left-4'}`} 
+                    delay={0.5 + categoryIndex * 0.1} 
+                  />
                   {/* Category Header */}
                   <div className="flex items-center gap-3 mb-6">
                     <Icon className={`w-8 h-8 ${category.color}`} />
@@ -120,7 +135,7 @@ export const SkillsPage = () => {
                       </motion.div>
                     ))}
                   </div>
-                </Card>
+                </ScrapbookCard>
               </motion.div>
             );
           })}

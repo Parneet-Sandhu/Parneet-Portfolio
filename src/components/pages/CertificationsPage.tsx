@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Award, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ScrapbookCard, PushPin, WashiTape, FloatingSticker } from "@/components/ScrapbookDecorations";
 
 export const CertificationsPage = () => {
   const certifications = [
@@ -74,11 +75,30 @@ export const CertificationsPage = () => {
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ delay: 0.1 + index * 0.1 }}
               whileHover={{ scale: 1.03, rotate: 0 }}
+              className="relative"
             >
-              <Card className="p-6 bg-card border-4 border-accent/20 shadow-xl hover:shadow-2xl transition-all h-full relative overflow-hidden">
-                {/* Decorative ribbon */}
+              <ScrapbookCard 
+                className="p-6 bg-card shadow-scrapbook hover:shadow-paper transition-all h-full"
+                rotation={[-1, 1, -0.5, 0.5, -1.5][index % 5]}
+              >
+                {index % 3 === 0 && <PushPin className="top-4 right-6" />}
+                {index % 3 === 1 && <WashiTape className="top-0 left-1/4 w-1/2 rotate-1" color="primary" />}
+                {index % 3 === 2 && (
+                  <>
+                    <PushPin className="top-4 left-6" />
+                    <WashiTape className="top-0 right-1/4 w-1/3 -rotate-2" color="accent" />
+                  </>
+                )}
+                
+                <FloatingSticker 
+                  emoji={["🏆", "✨", "⭐", "💫", "🌟"][index % 5]} 
+                  className={`-top-4 ${index % 2 === 0 ? '-right-4' : '-left-4'}`} 
+                  delay={0.4 + index * 0.1} 
+                />
+                
+                {/* Date ribbon */}
                 <div className="absolute top-0 right-0 w-20 h-20">
-                  <div className="absolute transform rotate-45 bg-primary text-primary-foreground text-center font-bold py-1 right-[-35px] top-[15px] w-[120px] text-xs">
+                  <div className="absolute transform rotate-45 bg-primary text-primary-foreground text-center font-bold py-1 right-[-35px] top-[15px] w-[120px] text-xs shadow-sticker">
                     {cert.date}
                   </div>
                 </div>
@@ -118,10 +138,10 @@ export const CertificationsPage = () => {
                   </Button>
                 </div>
 
-                {/* Decorative stars */}
-                <div className="absolute bottom-2 left-2 text-xl opacity-30">⭐</div>
-                <div className="absolute top-2 left-2 text-xl opacity-30">✨</div>
-              </Card>
+                {/* Corner stickers */}
+                <div className="absolute bottom-2 left-2 text-xl opacity-30 sticker-shadow">⭐</div>
+                <div className="absolute top-12 left-2 text-xl opacity-30 sticker-shadow">✨</div>
+              </ScrapbookCard>
             </motion.div>
           ))}
         </div>
