@@ -21,10 +21,10 @@ export const AboutPage = () => {
           className="text-center space-y-4"
         >
           <h2 className="text-5xl md:text-6xl font-elegant font-bold text-primary">
-            About Me ✨
+            About Me 💌
           </h2>
           <p className="text-xl text-muted-foreground font-body">
-            Get to know the person behind the code!
+            I fix problems you didn’t know existed in ways you wouldn’t understand
           </p>
         </motion.div>
 
@@ -41,7 +41,7 @@ export const AboutPage = () => {
             <WashiTape className="top-0 right-1/4 w-1/3 rotate-[2deg]" color="primary" />
             
             {/* Decorative stickers */}
-            <FloatingSticker emoji="⭐" className="-top-4 left-1/3" delay={0.4} />
+            <FloatingSticker emoji="" className="-top-4 left-1/3" delay={0.4} />
             <FloatingSticker emoji="💖" className="-bottom-6 right-12" delay={0.6} />
 
             <div className="space-y-6">
@@ -53,13 +53,13 @@ export const AboutPage = () => {
                 </h3>
                 <p className="text-lg font-body leading-relaxed text-foreground">
                   I'm Parneet Kaur Sandhu, an AI Engineer and Computer Science student from Bathinda, Punjab! 
-                  Currently pursuing my B.Tech at Maharaja Ranjit Singh Punjab Technical University (CGPA: 7.93) 
-                  and will be starting my M.Tech in Cyber Security at Central University of Punjab in 2025.
+                  Currently pursuing my M.Tech CSE in Cyber Security at Central University of Punjab in 2025.
                 </p>
                 <p className="text-lg font-body leading-relaxed text-foreground">
-                  I specialize in AI engineering, machine learning, and full-stack development. I've worked at 
-                  Cardekho Group as an AI Engineering Intern, where I built conversational AI features and RAG-based 
-                  chatbots. I'm passionate about NLP, Deep Learning, and creating innovative solutions! ✨
+                  I specialize in AI engineering, machine learning, and Cyber Security.I work across data science, machine learning, and creative tech, blending analytical thinking with design and storytelling. Whether it’s training models, building intelligent systems, or crafting something visually unique, I love exploring the intersection of technology and imagination.When I’m not deep into code, you’ll find me designing, brainstorming new tech ideas, or just enjoying the calm chaos of creativity. I believe innovation doesn’t have to look serious — it can be playful, powerful, and full of personality. 
+                  
+                  I've worked at Cardekho Group as an AI Engineering Intern, where I built conversational AI features and RAG-based 
+                  chatbots. I'm passionate about NLP, Deep Learning, and creating innovative solutions! 
                 </p>
               </div>
 
@@ -110,7 +110,7 @@ export const AboutPage = () => {
                 className="mt-8 p-6 bg-accent/10 border-l-4 border-primary rounded-r-xl"
               >
                 <p className="text-lg font-elegant">
-                  <span className="font-bold text-primary text-2xl">Fun Fact:</span> I've reduced token costs by 40% while maintaining 90% accuracy in RAG systems! Also starting M.Tech in Cyber Security soon! 🚀🔐
+                  <span className="font-bold text-primary text-2xl">Fun Fact:</span> I've reduced token costs by 40% while maintaining 90% accuracy in RAG systems! 
                 </p>
               </motion.div>
             </div>
@@ -125,7 +125,7 @@ export const AboutPage = () => {
           className="text-center"
         >
           <blockquote className="text-2xl md:text-3xl font-elegant text-primary italic">
-            "AI is not magic, it's mathematics with creativity" ✨
+            "Trust me, I’m an Engineer… most days." 
           </blockquote>
         </motion.div>
       </div>

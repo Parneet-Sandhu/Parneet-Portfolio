@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroImage from "@/assets/hero-workspace.jpg";
+import heroImage from "@/assets/hero-workspace.png";
 import { Button } from "@/components/ui/button";
 import { Sparkles, ArrowRight } from "lucide-react";
 import { FloatingSticker, PushPin, WashiTape } from "@/components/ScrapbookDecorations";
@@ -12,12 +12,12 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
   return (
     <div className="min-h-screen flex items-center justify-center p-4 overflow-hidden relative">
       {/* Enhanced Floating decorations */}
-      <FloatingSticker emoji="⭐" className="top-20 left-10" delay={0} />
+      <FloatingSticker emoji="🌸" className="top-20 left-10" delay={0} />
       <FloatingSticker emoji="💖" className="bottom-20 right-10" delay={0.2} />
-      <FloatingSticker emoji="✨" className="top-1/3 right-20" delay={0.4} />
+      <FloatingSticker emoji="🌸" className="top-1/3 right-20" delay={0.4} />
       <FloatingSticker emoji="🌸" className="bottom-32 left-20" delay={0.6} />
       <FloatingSticker emoji="🎀" className="top-1/4 right-1/4" delay={0.8} />
-      <FloatingSticker emoji="💫" className="bottom-1/4 left-1/3" delay={1} />
+      <FloatingSticker emoji="🌸" className="bottom-1/4 left-1/3" delay={1} />
       <FloatingSticker emoji="🦋" className="top-1/2 left-12" delay={1.2} />
 
       <div className="container max-w-6xl">
@@ -35,7 +35,7 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
               transition={{ delay: 0.2 }}
             >
               <h1 className="text-5xl md:text-7xl font-elegant font-bold text-primary leading-tight">
-                Hello! 👋
+                Hello! 
                 <br />
                 <span className="text-foreground">I'm Parneet Kaur Sandhu</span>
               </h1>
@@ -47,7 +47,7 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
               transition={{ delay: 0.4 }}
               className="text-lg md:text-xl text-muted-foreground font-body leading-relaxed"
             >
-              Welcome to my creative corner! 🎨 I'm an AI Engineer and Computer Science student from Bathinda, Punjab. Specializing in AI, machine learning, and full-stack development. This is not your typical portfolio - it's a fun scrapbook of my journey! ✨
+              Welcome to my creative corner! I'm an AI Engineer and Computer Science and Engineering student from Bathinda, Punjab. Specializing in AI, Machine learning, and Cyber Security. This is not your typical portfolio - it's a fun scrapbook of my journey! 
             </motion.p>
 
             <motion.div
@@ -121,7 +121,7 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
                     className="w-full h-auto"
                   />
                   <p className="mt-4 text-center font-elegant text-2xl text-gray-700">
-                    🖼️ Photo placeholder - Add your image! ✨
+                    AI/ML Engineer | Data Scientist | Research Scholar 
                   </p>
                   
                   {/* Decorative stickers on polaroid */}
@@ -135,9 +135,9 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
               </motion.div>
 
               {/* More floating decorations */}
-              <FloatingSticker emoji="💫" className="-top-8 -left-8" delay={0.5} />
+              <FloatingSticker emoji="💗" className="-top-8 -left-8" delay={0.5} />
               <FloatingSticker emoji="🌸" className="-bottom-6 -right-6" delay={0.7} />
-              <FloatingSticker emoji="✨" className="top-1/4 -left-12" delay={0.9} />
+              <FloatingSticker emoji="🍓" className="top-1/4 -left-12" delay={0.9} />
             </div>
           </motion.div>
         </div>
