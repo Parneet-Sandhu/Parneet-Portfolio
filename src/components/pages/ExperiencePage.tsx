@@ -5,20 +5,7 @@ import { ScrapbookCard, PushPin, WashiTape, PaperClip, FloatingSticker } from "@
 
 export const ExperiencePage = () => {
   const experiences = [
-    {
-      role: "Product Evaluator (Remote)",
-      company: "Phia",
-      location: "New York, NY",
-      period: "Sep 2024 – Present",
-      description: "Evaluated and analyzed the performance of Phia products",
-      achievements: [
-        "Evaluated and analyzed the performance of Phia products",
-        "Testing their beta identifying areas for improvement and optimization",
-        "Provided detailed feedback for product enhancement",
-      ],
-      tech: ["Product Testing", "Beta Analysis", "Performance Evaluation"],
-    },
-    {
+      {
       role: "AI Engineering Intern",
       company: "Cardekho Group",
       location: "Gurugram",
@@ -34,6 +21,19 @@ export const ExperiencePage = () => {
         "Engineered automated alert system improving reliability by 95%",
       ],
       tech: ["OpenAI API", "DeepSeek", "RAG", "Node.js", "TTS/STT", "APIs"],
+    },
+    {
+      role: "Product Evaluator (Remote)",
+      company: "Phia",
+      location: "New York, NY",
+      period: "Sep 2024 – Present",
+      description: "Evaluated and analyzed the performance of Phia products",
+      achievements: [
+        "Evaluated and analyzed the performance of Phia products",
+        "Testing their beta identifying areas for improvement and optimization",
+        "Provided detailed feedback for product enhancement",
+      ],
+      tech: ["Product Testing", "Beta Analysis", "Performance Evaluation"],
     },
     {
       role: "Data Science Intern",

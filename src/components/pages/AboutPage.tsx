@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { Code2, Coffee, Music, Palette, Sparkles } from "lucide-react";
+import { Binary, Code2, Database, Computer, Sparkles } from "lucide-react";
 import { ScrapbookCard, PushPin, WashiTape, PaperClip, FloatingSticker } from "@/components/ScrapbookDecorations";
 
 export const AboutPage = () => {
   const interests = [
-    { icon: Code2, text: "AI & Machine Learning", color: "text-primary" },
-    { icon: Coffee, text: "Data Science", color: "text-accent" },
-    { icon: Music, text: "NLP & Computer Vision", color: "text-primary" },
-    { icon: Palette, text: "Full Stack Development", color: "text-accent" },
+    { icon: Binary, text: "AI & Machine Learning", color: "text-primary" },
+    { icon: Database, text: "Data Science", color: "text-accent" },
+    { icon: Code2, text: "NLP,LLMs & Computer Vision", color: "text-primary" },
+    { icon: Computer, text: "Cyber Security", color: "text-accent" },
   ];
 
   return (

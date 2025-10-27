@@ -90,7 +90,7 @@ export const SkillsPage = () => {
           className="text-center space-y-4"
         >
           <h2 className="text-5xl md:text-6xl font-elegant font-bold text-primary">
-            Skills & Tech Stack 💻
+            Skills & Tech Stack 
           </h2>
           <p className="text-xl text-muted-foreground font-body">
             My toolbox of technologies and expertise

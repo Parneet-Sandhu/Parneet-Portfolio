@@ -24,8 +24,7 @@ export const EducationPage = () => {
       period: "Aug 2021 – Jun 2025",
       gpa: "7.93 CGPA",
       highlights: [
-        "Relevant Coursework: Data Structures and Algorithms, Machine Learning, Database Management Systems, Data Mining, Operating Systems",
-        "Additional courses: Artificial Intelligence, Soft Computing, Object Oriented Programming, Theory of Computation, Computer Networks",
+        "Relevant Coursework: Data Structures and Algorithms, Machine Learning, Database Management Systems, Data Mining, Operating Systems, Artificial Intelligence, Soft Computing, Object Oriented Programming, Theory of Computation, Computer Networks",
         "Strong foundation in both theoretical concepts and practical applications",
       ],
     },
@@ -42,7 +41,7 @@ export const EducationPage = () => {
         >
           <h2 className="text-5xl md:text-6xl font-elegant font-bold text-primary flex items-center justify-center gap-3">
             <GraduationCap className="w-12 h-12" />
-            Education 📚
+            Education 
           </h2>
           <p className="text-xl text-muted-foreground font-body">
             My academic journey and learning path
@@ -138,7 +137,7 @@ export const EducationPage = () => {
           className="text-center p-6 bg-accent/10 rounded-2xl border-2 border-accent/30"
         >
           <p className="text-lg font-elegant text-primary">
-            🌟 Always learning, always growing! Pursuing M.Tech in Cyber Security while working on cutting-edge AI projects! 🚀
+            Studying Cyber Security, building AI, and lowkey taking over the digital world 😏🚀
           </p>
         </motion.div>
       </div>
