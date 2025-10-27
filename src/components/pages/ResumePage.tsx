@@ -8,27 +8,27 @@ export const ResumePage = () => {
   const resumeHighlights = [
     {
       category: "Education",
-      items: ["B.Tech in CSE - MRSPTU", "M.Tech in CSE (Cyber Security) - CUP", "CGPA: 7.93"],
+      items: ["M.Tech in CSE (Cyber Security) - CUPB","B.Tech in CSE - MRSPTU", "CGPA: 7.93"],
       icon: "🎓",
-      color: "bg-pink-100 border-pink-300",
+      color: "bg-accent/10",
     },
     {
       category: "Experience",
-      items: ["AI Engineering Intern - Cardekho", "Data Science Intern - Dosh.ai", "Python Developer - Technopedia"],
+      items: ["AI Engineering Intern - Cardekho","Product Evaluator - Phia", "Data Science Intern - Dosh.ai", "Python Developer - Technopedia"],
       icon: "💼",
-      color: "bg-purple-100 border-purple-300",
+      color: "bg-primary/10",
     },
     {
       category: "Skills",
       items: ["Python, Java, C++, JavaScript", "TensorFlow, PyTorch, Scikit-learn", "Django, Flask, Node.js, REST APIs"],
       icon: "💻",
-      color: "bg-blue-100 border-blue-300",
+      color: "bg-accent/10",
     },
     {
       category: "Projects",
       items: ["De-Extinct AI - Genetic Revival Tool", "Diagno-AI - 4-in-1 Disease Predictor", "Virtual Try-On with MediaPipe"],
       icon: "🚀",
-      color: "bg-green-100 border-green-300",
+      color: "bg-primary/10",
     },
   ];
 

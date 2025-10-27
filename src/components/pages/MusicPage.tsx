@@ -1,38 +1,45 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { Music, Play, Heart } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Music, Headphones } from "lucide-react";
 import { ScrapbookCard, PushPin, WashiTape, PaperClip, FloatingSticker } from "@/components/ScrapbookDecorations";
 
 export const MusicPage = () => {
   const favoriteSongs = [
+        {
+      title: "Back To Friends",
+      artist: "Sombr",
+      emoji: "💕",
+      // Spotify embed URI
+      spotifyUri: "0FTmksd2dxiE5e3rWyJXs6"
+    },
     {
       title: "Call Me Maybe",
       artist: "Carly Rae Jepsen",
-      videoId: "fWNaR-rxAic",
-      emoji: "💕"
+      emoji: "💕",
+      // Spotify embed URI
+      spotifyUri: "0LEEBBFdS8qkMGswjODQq8"
     },
     {
       title: "Be My Baby",
       artist: "The Ronettes",
-      videoId: "jSPpbOGnFgk",
-      emoji: "🎀"
+      emoji: "🎀",
+      spotifyUri: "2G2YzndIA6jeWFPBXhUjh5"
     },
     {
       title: "Sure Thing",
       artist: "Miguel",
-      videoId: "Q3EjYP3O7lA",
-      emoji: "✨"
+      emoji: "✨",
+      spotifyUri: "0JXXNGljqupsJaZsgSbMZV"
     }
   ];
 
   const favoriteArtists = [
-    "Imagine Dragons",
+    "Adele",
     "The Weeknd",
-    "Billie Eilish",
-    "Daft Punk",
-    "ODESZA",
-    "Porter Robinson",
+    "Lana Del Rey",
+    "Chase Atlantic",
+    "The Neighbourhood",
+    "Sombr",
   ];
 
   return (
@@ -51,9 +58,13 @@ export const MusicPage = () => {
           <p className="text-xl text-muted-foreground font-body">
             My soundtrack for coding and creativity
           </p>
+          <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+            <Headphones className="w-4 h-4" />
+            <span>Press play to listen on Spotify</span>
+          </div>
         </motion.div>
 
-        {/* Favorite Songs */}
+        {/* Favorite Songs with Spotify Players */}
         <div className="space-y-6">
           {favoriteSongs.map((song, index) => (
             <motion.div
@@ -92,18 +103,18 @@ export const MusicPage = () => {
                     </p>
                   </div>
 
-                  {/* YouTube Embed */}
-                  <div className="aspect-video w-full rounded-lg overflow-hidden border-4 border-primary/20 shadow-lg">
+                  {/* Spotify Embed Player */}
+                  <div className="rounded-lg overflow-hidden border-4 border-primary/20 shadow-lg">
                     <iframe
+                      style={{ borderRadius: '12px' }}
+                      src={`https://open.spotify.com/embed/track/${song.spotifyUri}?utm_source=generator`}
                       width="100%"
-                      height="100%"
-                      src={`https://www.youtube.com/embed/${song.videoId}`}
-                      title={song.title}
+                      height="152"
                       frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
-                      className="w-full h-full"
-                    />
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                      loading="lazy"
+                    ></iframe>
                   </div>
                 </div>
               </ScrapbookCard>
@@ -145,7 +156,7 @@ export const MusicPage = () => {
           className="text-center p-6 bg-primary/10 rounded-2xl border-2 border-primary/30"
         >
           <p className="text-2xl font-elegant text-primary italic">
-            "Music is the soundtrack to my coding journey" 🎧✨
+            "Music is the soundtrack to my coding journey" 🎧
           </p>
         </motion.div>
 
@@ -184,4 +195,4 @@ export const MusicPage = () => {
       </div>
     </div>
   );
-};
+}
