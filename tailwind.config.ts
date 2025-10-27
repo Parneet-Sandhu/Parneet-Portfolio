@@ -110,6 +110,8 @@ export default {
       fontFamily: {
         'handwriting': ['Caveat', 'cursive'],
         'display': ['Quicksand', 'sans-serif'],
+        'elegant': ['Playfair Display', 'serif'],
+        'body': ['Cormorant Garamond', 'serif'],
       },
       boxShadow: {
         'scrapbook': '4px 4px 0px rgba(0,0,0,0.1), 8px 8px 0px rgba(0,0,0,0.05)',

@@ -5,10 +5,10 @@ import { ScrapbookCard, PushPin, WashiTape, PaperClip, FloatingSticker } from "@
 
 export const AboutPage = () => {
   const interests = [
-    { icon: Code2, text: "Coding & Problem Solving", color: "text-primary" },
-    { icon: Coffee, text: "Coffee Enthusiast ☕", color: "text-accent" },
-    { icon: Music, text: "Music Lover 🎵", color: "text-primary" },
-    { icon: Palette, text: "Creative Design", color: "text-accent" },
+    { icon: Code2, text: "AI & Machine Learning", color: "text-primary" },
+    { icon: Coffee, text: "Data Science", color: "text-accent" },
+    { icon: Music, text: "NLP & Computer Vision", color: "text-primary" },
+    { icon: Palette, text: "Full Stack Development", color: "text-accent" },
   ];
 
   return (
@@ -20,10 +20,10 @@ export const AboutPage = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-4"
         >
-          <h2 className="text-5xl md:text-6xl font-handwriting font-bold text-primary">
+          <h2 className="text-5xl md:text-6xl font-elegant font-bold text-primary">
             About Me ✨
           </h2>
-          <p className="text-xl text-muted-foreground font-display">
+          <p className="text-xl text-muted-foreground font-body">
             Get to know the person behind the code!
           </p>
         </motion.div>
@@ -47,35 +47,35 @@ export const AboutPage = () => {
             <div className="space-y-6">
               {/* Intro */}
               <div className="space-y-4">
-                <h3 className="text-3xl font-handwriting font-bold text-primary flex items-center gap-2">
+                <h3 className="text-3xl font-elegant font-bold text-primary flex items-center gap-2">
                   <Sparkles className="w-8 h-8" />
                   Hey there!
                 </h3>
-                <p className="text-lg font-display leading-relaxed text-foreground">
-                  I'm a Computer Science Engineering student with a passion for creating amazing digital experiences! 
-                  I love turning ideas into reality through code, and I'm always excited to learn new technologies 
-                  and tackle interesting challenges.
+                <p className="text-lg font-body leading-relaxed text-foreground">
+                  I'm Parneet Kaur Sandhu, an AI Engineer and Computer Science student from Bathinda, Punjab! 
+                  Currently pursuing my B.Tech at Maharaja Ranjit Singh Punjab Technical University (CGPA: 7.93) 
+                  and will be starting my M.Tech in Cyber Security at Central University of Punjab in 2025.
                 </p>
-                <p className="text-lg font-display leading-relaxed text-foreground">
-                  When I'm not coding, you'll probably find me exploring new music, designing creative projects, 
-                  or sipping coffee while brainstorming my next big idea. I believe in making tech fun, 
-                  accessible, and beautiful! ✨
+                <p className="text-lg font-body leading-relaxed text-foreground">
+                  I specialize in AI engineering, machine learning, and full-stack development. I've worked at 
+                  Cardekho Group as an AI Engineering Intern, where I built conversational AI features and RAG-based 
+                  chatbots. I'm passionate about NLP, Deep Learning, and creating innovative solutions! ✨
                 </p>
               </div>
 
               {/* Personality Traits */}
               <div className="space-y-3">
-                <h4 className="text-2xl font-handwriting font-bold text-secondary">
+                <h4 className="text-2xl font-elegant font-bold text-secondary">
                   What makes me, me? 🌟
                 </h4>
                 <div className="flex flex-wrap gap-3">
-                  {["Creative Thinker", "Problem Solver", "Team Player", "Fast Learner", "Detail-Oriented"].map((trait, index) => (
+                  {["AI Enthusiast", "Problem Solver", "Team Player", "Fast Learner", "Detail-Oriented"].map((trait, index) => (
                     <motion.span
                       key={trait}
                       initial={{ opacity: 0, scale: 0 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.4 + index * 0.1 }}
-                      className="px-4 py-2 bg-primary/10 border-2 border-primary/30 rounded-full text-primary font-display font-semibold"
+                      className="px-4 py-2 bg-primary/10 border-2 border-primary/30 rounded-full text-primary font-body font-semibold"
                     >
                       {trait}
                     </motion.span>
@@ -96,7 +96,7 @@ export const AboutPage = () => {
                       className="flex items-center gap-3 p-4 bg-background rounded-xl border-2 border-accent/20"
                     >
                       <Icon className={`w-6 h-6 ${interest.color}`} />
-                      <span className="font-display font-medium">{interest.text}</span>
+                      <span className="font-body font-medium">{interest.text}</span>
                     </motion.div>
                   );
                 })}
@@ -109,8 +109,8 @@ export const AboutPage = () => {
                 transition={{ delay: 0.8 }}
                 className="mt-8 p-6 bg-accent/10 border-l-4 border-primary rounded-r-xl"
               >
-                <p className="text-lg font-handwriting">
-                  <span className="font-bold text-primary text-2xl">Fun Fact:</span> I debugged my first code at 2 AM with coffee in one hand and determination in the other! 💪☕
+                <p className="text-lg font-elegant">
+                  <span className="font-bold text-primary text-2xl">Fun Fact:</span> I've reduced token costs by 40% while maintaining 90% accuracy in RAG systems! Also starting M.Tech in Cyber Security soon! 🚀🔐
                 </p>
               </motion.div>
             </div>
@@ -124,8 +124,8 @@ export const AboutPage = () => {
           transition={{ delay: 1 }}
           className="text-center"
         >
-          <blockquote className="text-2xl md:text-3xl font-handwriting text-primary italic">
-            "Code is poetry written in logic" ✨
+          <blockquote className="text-2xl md:text-3xl font-elegant text-primary italic">
+            "AI is not magic, it's mathematics with creativity" ✨
           </blockquote>
         </motion.div>
       </div>

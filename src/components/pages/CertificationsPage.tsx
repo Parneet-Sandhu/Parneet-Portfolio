@@ -57,11 +57,11 @@ export const CertificationsPage = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-4"
         >
-          <h2 className="text-5xl md:text-6xl font-handwriting font-bold text-primary flex items-center justify-center gap-3">
+          <h2 className="text-5xl md:text-6xl font-elegant font-bold text-primary flex items-center justify-center gap-3">
             <Award className="w-12 h-12" />
             Certifications 🏅
           </h2>
-          <p className="text-xl text-muted-foreground font-display">
+          <p className="text-xl text-muted-foreground font-body">
             My learning journey and achievements
           </p>
         </motion.div>
@@ -110,17 +110,17 @@ export const CertificationsPage = () => {
 
                 <div className="space-y-3">
                   {/* Title */}
-                  <h3 className="text-2xl font-handwriting font-bold text-primary">
+                  <h3 className="text-2xl font-elegant font-bold text-primary">
                     {cert.title}
                   </h3>
 
                   {/* Issuer */}
-                  <p className="text-lg font-display font-semibold text-secondary">
+                  <p className="text-lg font-body font-semibold text-secondary">
                     {cert.issuer}
                   </p>
 
                   {/* Description */}
-                  <p className="text-foreground font-display text-sm">
+                  <p className="text-foreground font-body text-sm">
                     {cert.description}
                   </p>
 
@@ -154,26 +154,26 @@ export const CertificationsPage = () => {
           className="grid grid-cols-3 gap-4"
         >
           <Card className="p-6 text-center bg-primary/10 border-2 border-primary/30">
-            <p className="text-4xl font-handwriting font-bold text-primary mb-2">
+            <p className="text-4xl font-elegant font-bold text-primary mb-2">
               5+
             </p>
-            <p className="text-sm font-display text-foreground">
+            <p className="text-sm font-body text-foreground">
               Certifications
             </p>
           </Card>
           <Card className="p-6 text-center bg-accent/10 border-2 border-accent/30">
-            <p className="text-4xl font-handwriting font-bold text-accent mb-2">
+            <p className="text-4xl font-elegant font-bold text-accent mb-2">
               500+
             </p>
-            <p className="text-sm font-display text-foreground">
+            <p className="text-sm font-body text-foreground">
               Learning Hours
             </p>
           </Card>
           <Card className="p-6 text-center bg-secondary/10 border-2 border-secondary/30">
-            <p className="text-4xl font-handwriting font-bold text-secondary mb-2">
+            <p className="text-4xl font-elegant font-bold text-secondary mb-2">
               ∞
             </p>
-            <p className="text-sm font-display text-foreground">
+            <p className="text-sm font-body text-foreground">
               More to Learn
             </p>
           </Card>
@@ -186,7 +186,7 @@ export const CertificationsPage = () => {
           transition={{ delay: 1 }}
           className="text-center p-6 bg-accent/10 rounded-2xl"
         >
-          <p className="text-lg font-handwriting text-primary">
+          <p className="text-lg font-elegant text-primary">
             🌟 Never stop learning! The journey of knowledge is endless and exciting! 📚✨
           </p>
         </motion.div>

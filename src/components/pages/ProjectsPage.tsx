@@ -7,56 +7,42 @@ import { ScrapbookCard, PushPin, WashiTape, PaperClip, FloatingSticker } from "@
 export const ProjectsPage = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce website with cart functionality, payment integration, and admin dashboard",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "🛒",
+      title: "De-Extinct AI",
+      description: "Designed a genetic feasibility tool using BLAST alignment and AI thresholds to evaluate the revival potential of extinct species. Deployed with Streamlit, Biopython, and Plotly.",
+      tech: ["Python", "Streamlit", "Biopython", "Plotly", "BLAST"],
+      image: "🧬",
       color: "bg-primary/10",
+      date: "May 2025",
       github: "#",
       live: "#",
     },
     {
-      title: "Task Management App",
-      description: "Collaborative task manager with real-time updates, drag-and-drop interface, and team features",
-      tech: ["React", "Firebase", "Tailwind CSS"],
-      image: "📝",
+      title: "Diagno-AI",
+      description: "Engineered a 4-in-1 disease prediction app (Parkinson's, Lung Cancer, Heart Disease, Diabetes) using Streamlit and pre-trained ML models with 90+ accuracy. Boosted user engagement by 60% with dynamic UI.",
+      tech: ["Streamlit", "Machine Learning", "Python", "Healthcare AI"],
+      image: "🏥",
       color: "bg-accent/10",
+      date: "Mar 2025",
       github: "#",
       live: "#",
     },
     {
-      title: "Weather Dashboard",
-      description: "Beautiful weather app with forecasts, location search, and interactive maps",
-      tech: ["JavaScript", "Weather API", "Chart.js"],
-      image: "⛅",
+      title: "Virtual Try-On",
+      description: "Established a virtual try-on app using MediaPipe, OpenCV, and Tkinter/Kivy allowing users to try on accessories in real time with 92% satisfaction rate in user tests.",
+      tech: ["MediaPipe", "OpenCV", "Tkinter", "Computer Vision"],
+      image: "👓",
       color: "bg-secondary/10",
+      date: "Nov 2024",
       github: "#",
       live: "#",
     },
     {
-      title: "Portfolio Generator",
-      description: "Tool to help developers create stunning portfolios with templates and customization options",
-      tech: ["React", "TypeScript", "CSS"],
-      image: "🎨",
+      title: "FarmTech",
+      description: "Generated a machine learning model to predict the most suitable crop with 90% accuracy, based on 7 key environmental factors. Deployed as a web application.",
+      tech: ["Machine Learning", "Flask", "Python", "Agriculture AI"],
+      image: "🌾",
       color: "bg-primary/10",
-      github: "#",
-      live: "#",
-    },
-    {
-      title: "Chat Application",
-      description: "Real-time messaging app with rooms, emoji support, and file sharing capabilities",
-      tech: ["Socket.io", "Express", "React"],
-      image: "💬",
-      color: "bg-accent/10",
-      github: "#",
-      live: "#",
-    },
-    {
-      title: "Recipe Finder",
-      description: "Discover and save recipes with smart search, dietary filters, and cooking instructions",
-      tech: ["React", "Recipe API", "Redux"],
-      image: "🍳",
-      color: "bg-secondary/10",
+      date: "Apr 2024",
       github: "#",
       live: "#",
     },
@@ -71,16 +57,16 @@ export const ProjectsPage = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-4"
         >
-          <h2 className="text-5xl md:text-6xl font-handwriting font-bold text-primary">
+          <h2 className="text-5xl md:text-6xl font-elegant font-bold text-primary">
             Projects 🚀
           </h2>
-          <p className="text-xl text-muted-foreground font-display">
+          <p className="text-xl text-muted-foreground font-body">
             Things I've built with code and creativity
           </p>
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -92,7 +78,7 @@ export const ProjectsPage = () => {
             >
               <ScrapbookCard 
                 className={`${project.color} shadow-scrapbook overflow-hidden h-full flex flex-col`}
-                rotation={[-2, 0, 2, -1.5, 1.5, -1][index % 6]}
+                rotation={[-2, 1.5, -1.5, 2][index % 4]}
               >
                 {/* Scrapbook decorations */}
                 {index % 3 === 0 && <PushPin className="top-2 right-4" />}
@@ -100,10 +86,15 @@ export const ProjectsPage = () => {
                 {index % 3 === 2 && <WashiTape className="top-0 left-1/4 w-1/2" color="accent" />}
                 
                 <FloatingSticker 
-                  emoji={["🌟", "✨", "💖", "⭐", "💫", "🎀"][index % 6]} 
+                  emoji={["🌟", "✨", "💖", "⭐"][index % 4]} 
                   className={`${index % 2 === 0 ? '-top-4 -right-4' : '-top-4 -left-4'}`} 
                   delay={0.3 + index * 0.1} 
                 />
+
+                {/* Date badge */}
+                <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-body shadow-sticker">
+                  {project.date}
+                </div>
 
                 {/* Image/Icon Section */}
                 <div className="relative bg-card p-8 flex items-center justify-center">
@@ -115,10 +106,10 @@ export const ProjectsPage = () => {
 
                 {/* Content */}
                 <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="text-2xl font-handwriting font-bold text-primary mb-2">
+                  <h3 className="text-2xl font-elegant font-bold text-primary mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-foreground font-display mb-4 flex-1">
+                  <p className="text-foreground font-body mb-4 flex-1">
                     {project.description}
                   </p>
 
@@ -127,7 +118,7 @@ export const ProjectsPage = () => {
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 bg-background border border-accent/30 rounded-full text-xs font-display font-medium text-foreground"
+                        className="px-2 py-1 bg-background border border-accent/30 rounded-full text-xs font-body font-medium text-foreground"
                       >
                         {tech}
                       </span>
@@ -171,7 +162,7 @@ export const ProjectsPage = () => {
           transition={{ delay: 0.8 }}
           className="text-center p-6 bg-primary/10 rounded-2xl border-2 border-primary/30"
         >
-          <p className="text-lg font-handwriting text-primary mb-4">
+          <p className="text-lg font-elegant text-primary mb-4">
             Want to see more? Check out my GitHub! 🌟
           </p>
           <Button className="bg-primary hover:bg-primary/90 gap-2" asChild>

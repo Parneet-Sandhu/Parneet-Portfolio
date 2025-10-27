@@ -7,26 +7,26 @@ export const EducationPage = () => {
   const education = [
     {
       degree: "Bachelor of Technology",
-      major: "Computer Science Engineering",
-      institution: "Your University Name",
-      period: "2021 - 2025",
-      gpa: "8.5/10",
+      major: "Computer Science and Engineering",
+      institution: "Maharaja Ranjit Singh Punjab Technical University, Bathinda",
+      period: "Aug 2021 – Jun 2025",
+      gpa: "7.93 CGPA",
       highlights: [
-        "Relevant Coursework: Data Structures, Algorithms, Web Development, AI/ML",
-        "Active member of the Coding Club",
-        "Participated in multiple hackathons and tech events",
+        "Relevant Coursework: Data Structures and Algorithms, Machine Learning, Database Management Systems, Data Mining, Operating Systems",
+        "Additional courses: Artificial Intelligence, Soft Computing, Object Oriented Programming, Theory of Computation, Computer Networks",
+        "Strong foundation in both theoretical concepts and practical applications",
       ],
     },
     {
-      degree: "Higher Secondary Education",
-      major: "Science Stream (PCM)",
-      institution: "Your School Name",
-      period: "2019 - 2021",
-      gpa: "92%",
+      degree: "Master of Technology",
+      major: "Computer Science and Engineering (Cyber Security)",
+      institution: "Central University of Punjab, Bathinda",
+      period: "Aug 2025 – Jun 2027",
+      gpa: "Pursuing",
       highlights: [
-        "Computer Science as main subject",
-        "School tech team member",
-        "Science exhibition participant",
+        "Specialization in Cyber Security",
+        "Advanced studies in security protocols and ethical hacking",
+        "Research-oriented program focusing on emerging security threats",
       ],
     },
   ];
@@ -40,11 +40,11 @@ export const EducationPage = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-4"
         >
-          <h2 className="text-5xl md:text-6xl font-handwriting font-bold text-primary flex items-center justify-center gap-3">
+          <h2 className="text-5xl md:text-6xl font-elegant font-bold text-primary flex items-center justify-center gap-3">
             <GraduationCap className="w-12 h-12" />
             Education 📚
           </h2>
-          <p className="text-xl text-muted-foreground font-display">
+          <p className="text-xl text-muted-foreground font-body">
             My academic journey and learning path
           </p>
         </motion.div>
@@ -76,15 +76,15 @@ export const EducationPage = () => {
                   {/* Degree and Period */}
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
                     <div>
-                      <h3 className="text-2xl md:text-3xl font-handwriting font-bold text-primary">
+                      <h3 className="text-2xl md:text-3xl font-elegant font-bold text-primary">
                         {edu.degree}
                       </h3>
-                      <p className="text-xl font-display font-semibold text-secondary">
+                      <p className="text-xl font-body font-semibold text-secondary">
                         {edu.major}
                       </p>
                     </div>
                     <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
-                      <span className="text-sm font-display font-semibold text-primary">
+                      <span className="text-sm font-body font-semibold text-primary">
                         {edu.period}
                       </span>
                     </div>
@@ -93,20 +93,20 @@ export const EducationPage = () => {
                   {/* Institution */}
                   <div className="flex items-center gap-2 text-lg text-foreground">
                     <BookOpen className="w-5 h-5 text-accent" />
-                    <span className="font-display">{edu.institution}</span>
+                    <span className="font-body">{edu.institution}</span>
                   </div>
 
                   {/* GPA */}
                   <div className="flex items-center gap-2">
                     <Award className="w-5 h-5 text-primary" />
-                    <span className="font-display font-semibold text-primary">
-                      GPA: {edu.gpa}
+                    <span className="font-body font-semibold text-primary">
+                      {edu.gpa}
                     </span>
                   </div>
 
                   {/* Highlights */}
                   <div className="space-y-2 pt-2">
-                    <h4 className="font-display font-semibold text-foreground">
+                    <h4 className="font-body font-semibold text-foreground">
                       Highlights:
                     </h4>
                     <ul className="space-y-2">
@@ -116,7 +116,7 @@ export const EducationPage = () => {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: 0.4 + index * 0.2 + idx * 0.1 }}
-                          className="flex items-start gap-2 text-foreground font-display"
+                          className="flex items-start gap-2 text-foreground font-body"
                         >
                           <span className="text-primary mt-1">✦</span>
                           <span>{highlight}</span>
@@ -137,8 +137,8 @@ export const EducationPage = () => {
           transition={{ delay: 0.8 }}
           className="text-center p-6 bg-accent/10 rounded-2xl border-2 border-accent/30"
         >
-          <p className="text-lg font-handwriting text-primary">
-            🌟 Always learning, always growing! Currently exploring new technologies and building amazing projects! 🚀
+          <p className="text-lg font-elegant text-primary">
+            🌟 Always learning, always growing! Pursuing M.Tech in Cyber Security while working on cutting-edge AI projects! 🚀
           </p>
         </motion.div>
       </div>

@@ -29,34 +29,34 @@ export const ContactPage = () => {
     {
       name: "Email",
       icon: Mail,
-      link: "mailto:your.email@example.com",
+      link: "mailto:parneetsandhu20003@gmail.com",
       color: "text-primary",
       bgColor: "bg-primary/10",
-      handle: "your.email@example.com",
+      handle: "parneetsandhu20003@gmail.com",
     },
     {
       name: "GitHub",
       icon: Github,
-      link: "https://github.com/yourusername",
+      link: "https://github.com",
       color: "text-secondary",
       bgColor: "bg-secondary/10",
-      handle: "@yourusername",
+      handle: "🔗 Add your GitHub link",
     },
     {
       name: "LinkedIn",
       icon: Linkedin,
-      link: "https://linkedin.com/in/yourprofile",
+      link: "https://linkedin.com",
       color: "text-accent",
       bgColor: "bg-accent/10",
-      handle: "Your Name",
+      handle: "🔗 Add your LinkedIn",
     },
     {
-      name: "Twitter",
-      icon: Twitter,
-      link: "https://twitter.com/yourusername",
+      name: "Phone",
+      icon: Mail,
+      link: "tel:7717477651",
       color: "text-primary",
       bgColor: "bg-primary/10",
-      handle: "@yourusername",
+      handle: "77174-77651",
     },
   ];
 
@@ -69,10 +69,10 @@ export const ContactPage = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-4"
         >
-          <h2 className="text-5xl md:text-6xl font-handwriting font-bold text-primary">
+          <h2 className="text-5xl md:text-6xl font-elegant font-bold text-primary">
             Let's Connect! 💌
           </h2>
-          <p className="text-xl text-muted-foreground font-display">
+          <p className="text-xl text-muted-foreground font-body">
             Have a project in mind? Want to collaborate? Just say hi!
           </p>
         </motion.div>
@@ -96,12 +96,12 @@ export const ContactPage = () => {
                   <div key={i} className="w-3 h-3 rounded-full bg-muted border border-muted-foreground/20"></div>
                 ))}
               </div>
-              <h3 className="text-3xl font-handwriting font-bold text-primary mb-6">
+              <h3 className="text-3xl font-elegant font-bold text-primary mb-6">
                 Send me a message ✉️
               </h3>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-sm font-display font-medium text-foreground mb-2">
+                  <label className="block text-sm font-body font-medium text-foreground mb-2">
                     Your Name
                   </label>
                   <Input
@@ -114,7 +114,7 @@ export const ContactPage = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-display font-medium text-foreground mb-2">
+                  <label className="block text-sm font-body font-medium text-foreground mb-2">
                     Your Email
                   </label>
                   <Input
@@ -127,7 +127,7 @@ export const ContactPage = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-display font-medium text-foreground mb-2">
+                  <label className="block text-sm font-body font-medium text-foreground mb-2">
                     Your Message
                   </label>
                   <Textarea
@@ -155,7 +155,7 @@ export const ContactPage = () => {
             className="space-y-6"
           >
             <Card className="p-6 md:p-8 bg-primary/10 border-4 border-primary/30 shadow-xl">
-              <h3 className="text-3xl font-handwriting font-bold text-primary mb-6">
+              <h3 className="text-3xl font-elegant font-bold text-primary mb-6">
                 Find me on 🌐
               </h3>
               <div className="space-y-4">
@@ -176,10 +176,10 @@ export const ContactPage = () => {
                     >
                       <Icon className={`w-6 h-6 ${social.color}`} />
                       <div className="flex-1">
-                        <p className="font-display font-semibold text-foreground">
+                        <p className="font-body font-semibold text-foreground">
                           {social.name}
                         </p>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-sm text-muted-foreground font-body">
                           {social.handle}
                         </p>
                       </div>
@@ -197,10 +197,10 @@ export const ContactPage = () => {
               transition={{ delay: 1 }}
             >
               <Card className="p-6 bg-accent/10 border-4 border-accent/30 shadow-xl text-center">
-                <p className="text-2xl font-handwriting font-bold text-primary mb-2">
+                <p className="text-2xl font-elegant font-bold text-primary mb-2">
                   Currently Available! ✨
                 </p>
-                <p className="text-foreground font-display">
+                <p className="text-foreground font-body">
                   Open for internships, freelance projects, and collaborations!
                 </p>
               </Card>
@@ -215,7 +215,7 @@ export const ContactPage = () => {
           transition={{ delay: 1.2 }}
           className="text-center p-6 bg-card rounded-2xl border-2 border-accent/20"
         >
-          <p className="text-lg font-handwriting text-primary">
+          <p className="text-lg font-elegant text-primary">
             ⚡ I usually respond within 24 hours! Looking forward to hearing from you! 💫
           </p>
         </motion.div>

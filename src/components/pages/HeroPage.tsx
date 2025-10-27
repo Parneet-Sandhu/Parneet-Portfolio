@@ -34,10 +34,10 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <h1 className="text-5xl md:text-7xl font-handwriting font-bold text-primary leading-tight">
+              <h1 className="text-5xl md:text-7xl font-elegant font-bold text-primary leading-tight">
                 Hello! 👋
                 <br />
-                <span className="text-foreground">I'm a CS Student</span>
+                <span className="text-foreground">I'm Parneet Kaur Sandhu</span>
               </h1>
             </motion.div>
 
@@ -45,9 +45,9 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-lg md:text-xl text-muted-foreground font-display leading-relaxed"
+              className="text-lg md:text-xl text-muted-foreground font-body leading-relaxed"
             >
-              Welcome to my creative corner! 🎨 I'm a Computer Science Engineering student passionate about coding, creating, and making cool stuff. This is not your typical portfolio - it's a fun scrapbook of my journey! ✨
+              Welcome to my creative corner! 🎨 I'm an AI Engineer and Computer Science student from Bathinda, Punjab. Specializing in AI, machine learning, and full-stack development. This is not your typical portfolio - it's a fun scrapbook of my journey! ✨
             </motion.p>
 
             <motion.div
@@ -58,7 +58,7 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
             >
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-display gap-2 shadow-lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-body gap-2 shadow-lg"
                 onClick={() => onNavigate(1)}
               >
                 <Sparkles className="w-5 h-5" />
@@ -68,7 +68,7 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="font-display border-2 border-primary hover:bg-primary/10"
+                className="font-body border-2 border-primary hover:bg-primary/10"
                 onClick={() => onNavigate(9)}
               >
                 Get in Touch
@@ -82,16 +82,16 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
               className="flex gap-4 pt-4"
             >
               <div className="bg-card p-4 rounded-2xl shadow-md border-2 border-accent/20">
-                <p className="text-3xl font-bold text-primary font-handwriting">10+</p>
-                <p className="text-sm text-muted-foreground font-display">Projects</p>
+                <p className="text-3xl font-bold text-primary font-elegant">4+</p>
+                <p className="text-sm text-muted-foreground font-body">Projects</p>
               </div>
               <div className="bg-card p-4 rounded-2xl shadow-md border-2 border-accent/20">
-                <p className="text-3xl font-bold text-primary font-handwriting">5+</p>
-                <p className="text-sm text-muted-foreground font-display">Certifications</p>
+                <p className="text-3xl font-bold text-primary font-elegant">3</p>
+                <p className="text-sm text-muted-foreground font-body">Internships</p>
               </div>
               <div className="bg-card p-4 rounded-2xl shadow-md border-2 border-accent/20">
-                <p className="text-3xl font-bold text-primary font-handwriting">∞</p>
-                <p className="text-sm text-muted-foreground font-display">Ideas</p>
+                <p className="text-3xl font-bold text-primary font-elegant">7.93</p>
+                <p className="text-sm text-muted-foreground font-body">CGPA</p>
               </div>
             </motion.div>
           </motion.div>
@@ -120,8 +120,8 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
                     alt="Creative workspace"
                     className="w-full h-auto"
                   />
-                  <p className="mt-4 text-center font-handwriting text-2xl text-gray-700">
-                    my happy place ☕️💻
+                  <p className="mt-4 text-center font-elegant text-2xl text-gray-700">
+                    🖼️ Photo placeholder - Add your image! ✨
                   </p>
                   
                   {/* Decorative stickers on polaroid */}
