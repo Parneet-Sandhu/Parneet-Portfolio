@@ -82,16 +82,16 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
               className="flex gap-4 pt-4"
             >
               <div className="bg-card p-4 rounded-2xl shadow-md border-2 border-accent/20">
-                <p className="text-3xl font-bold text-primary font-elegant">4+</p>
+                <p className="text-3xl font-bold text-primary font-elegant">25+</p>
                 <p className="text-sm text-muted-foreground font-body">Projects</p>
               </div>
               <div className="bg-card p-4 rounded-2xl shadow-md border-2 border-accent/20">
-                <p className="text-3xl font-bold text-primary font-elegant">3</p>
+                <p className="text-3xl font-bold text-primary font-elegant">4</p>
                 <p className="text-sm text-muted-foreground font-body">Internships</p>
               </div>
               <div className="bg-card p-4 rounded-2xl shadow-md border-2 border-accent/20">
                 <p className="text-3xl font-bold text-primary font-elegant">7.93</p>
-                <p className="text-sm text-muted-foreground font-body">CGPA</p>
+                <p className="text-sm text-muted-foreground font-body">CGPA in Btech</p>
               </div>
             </motion.div>
           </motion.div>

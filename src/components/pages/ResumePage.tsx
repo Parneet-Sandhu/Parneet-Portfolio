@@ -8,35 +8,60 @@ export const ResumePage = () => {
   const resumeHighlights = [
     {
       category: "Education",
-      items: ["B.Tech in Computer Science", "8.5+ GPA", "Relevant Coursework"],
+      items: ["B.Tech in CSE - MRSPTU", "M.Tech in CSE (Cyber Security) - CUP", "CGPA: 7.93"],
       icon: "🎓",
+      color: "bg-pink-100 border-pink-300",
     },
     {
       category: "Experience",
-      items: ["Software Dev Intern", "Freelance Projects", "Tech Club Member"],
+      items: ["AI Engineering Intern - Cardekho", "Data Science Intern - Dosh.ai", "Python Developer - Technopedia"],
       icon: "💼",
+      color: "bg-purple-100 border-purple-300",
     },
     {
       category: "Skills",
-      items: ["React & TypeScript", "Node.js & MongoDB", "UI/UX Design"],
+      items: ["Python, Java, C++, JavaScript", "TensorFlow, PyTorch, Scikit-learn", "Django, Flask, Node.js, REST APIs"],
       icon: "💻",
+      color: "bg-blue-100 border-blue-300",
     },
     {
       category: "Projects",
-      items: ["10+ Completed Projects", "Full-Stack Applications", "Open Source Contributions"],
+      items: ["De-Extinct AI - Genetic Revival Tool", "Diagno-AI - 4-in-1 Disease Predictor", "Virtual Try-On with MediaPipe"],
       icon: "🚀",
+      color: "bg-green-100 border-green-300",
     },
   ];
 
   return (
-    <div className="min-h-screen p-4 md:p-8">
-      <div className="container max-w-4xl mx-auto space-y-8">
+    <div className="min-h-screen p-4 md:p-8 relative">
+      {/* Decorative checkered border at top */}
+      <div className="fixed top-0 left-0 right-0 h-8 bg-gradient-to-r from-pink-200 via-purple-200 to-blue-200 border-b-4 border-primary/30 z-50" style={{
+        backgroundImage: 'repeating-linear-gradient(90deg, #fce7f3 0px, #fce7f3 20px, #e9d5ff 20px, #e9d5ff 40px, #dbeafe 40px, #dbeafe 60px, #d1fae5 60px, #d1fae5 80px)',
+      }} />
+      
+      <div className="container max-w-4xl mx-auto space-y-8 mt-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center space-y-4"
+          className="text-center space-y-4 relative"
         >
+          {/* Floating decorative emojis */}
+          <motion.span 
+            className="absolute -left-12 top-0 text-4xl"
+            animate={{ rotate: [0, 10, -10, 0], y: [0, -10, 0] }}
+            transition={{ duration: 3, repeat: Infinity }}
+          >
+            🌟
+          </motion.span>
+          <motion.span 
+            className="absolute -right-12 top-0 text-4xl"
+            animate={{ rotate: [0, -10, 10, 0], y: [0, -10, 0] }}
+            transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
+          >
+            ✨
+          </motion.span>
+          
           <h2 className="text-5xl md:text-6xl font-elegant font-bold text-primary flex items-center justify-center gap-3">
             <FileText className="w-12 h-12" />
             Resume 📄
@@ -77,7 +102,7 @@ export const ResumePage = () => {
                     AI Engineer & Computer Science Student
                   </p>
                   <p className="text-foreground font-body mt-2">
-                    parneet29sandhu@gmail.com | +91 9988594850 | Bathinda, Punjab
+                    parneetsandhu20003@gmail.com | +91 77174-77651 | Bathinda, Punjab
                   </p>
                 </motion.div>
               </div>
@@ -90,15 +115,19 @@ export const ResumePage = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6 + index * 0.1 }}
-                    className="space-y-3"
+                    className={`space-y-3 p-4 rounded-xl border-2 ${section.color} relative overflow-hidden`}
+                    whileHover={{ scale: 1.02, rotate: index % 2 === 0 ? 1 : -1 }}
                   >
-                    <div className="flex items-center gap-3">
+                    <div className="absolute -right-4 -top-4 text-6xl opacity-10">
+                      {section.icon}
+                    </div>
+                    <div className="flex items-center gap-3 relative z-10">
                       <span className="text-4xl">{section.icon}</span>
                       <h4 className="text-2xl font-elegant font-bold text-primary">
                         {section.category}
                       </h4>
                     </div>
-                    <ul className="space-y-2 pl-4">
+                    <ul className="space-y-2 pl-4 relative z-10">
                       {section.items.map((item, idx) => (
                         <li key={idx} className="flex items-start gap-2 text-foreground font-body">
                           <span className="text-primary mt-1">★</span>
@@ -137,7 +166,7 @@ export const ResumePage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2 }}
           >
-            <Card className="p-6 text-center bg-primary/10 border-2 border-primary/30 hover:scale-105 transition-transform">
+            <Card className="p-6 text-center bg-primary/10 border-2 border-primary/30 hover:scale-105 transition-transform hover:rotate-2">
               <Sparkles className="w-8 h-8 text-primary mx-auto mb-2" />
               <p className="text-3xl font-elegant font-bold text-primary mb-1">
                 3
@@ -153,7 +182,7 @@ export const ResumePage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3 }}
           >
-            <Card className="p-6 text-center bg-accent/10 border-2 border-accent/30 hover:scale-105 transition-transform">
+            <Card className="p-6 text-center bg-accent/10 border-2 border-accent/30 hover:scale-105 transition-transform hover:-rotate-2">
               <FileText className="w-8 h-8 text-accent mx-auto mb-2" />
               <p className="text-3xl font-elegant font-bold text-accent mb-1">
                 7.93
@@ -169,13 +198,13 @@ export const ResumePage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.4 }}
           >
-            <Card className="p-6 text-center bg-secondary/10 border-2 border-secondary/30 hover:scale-105 transition-transform">
+            <Card className="p-6 text-center bg-secondary/10 border-2 border-secondary/30 hover:scale-105 transition-transform hover:rotate-1">
               <Eye className="w-8 h-8 text-secondary mx-auto mb-2" />
               <p className="text-3xl font-elegant font-bold text-secondary mb-1">
-                4
+                5+
               </p>
               <p className="text-sm font-body text-foreground">
-                Projects
+                Major Projects
               </p>
             </Card>
           </motion.div>
