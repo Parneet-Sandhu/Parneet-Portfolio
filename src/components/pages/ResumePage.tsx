@@ -37,12 +37,12 @@ export const ResumePage = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-4"
         >
-          <h2 className="text-5xl md:text-6xl font-handwriting font-bold text-primary flex items-center justify-center gap-3">
+          <h2 className="text-5xl md:text-6xl font-elegant font-bold text-primary flex items-center justify-center gap-3">
             <FileText className="w-12 h-12" />
             Resume 📄
           </h2>
-          <p className="text-xl text-muted-foreground font-display">
-            Everything you need to know, in one document
+          <p className="text-xl text-muted-foreground font-body">
+            Download my complete professional profile
           </p>
         </motion.div>
 
@@ -70,14 +70,14 @@ export const ResumePage = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
                 >
-                  <h3 className="text-4xl font-handwriting font-bold text-primary mb-2">
-                    Your Name
+                  <h3 className="text-4xl font-elegant font-bold text-primary mb-2">
+                    Parneet Kaur Sandhu
                   </h3>
-                  <p className="text-xl font-display text-secondary font-semibold">
-                    Computer Science Engineering Student
+                  <p className="text-xl font-body text-secondary font-semibold">
+                    AI Engineer & Computer Science Student
                   </p>
-                  <p className="text-foreground font-display mt-2">
-                    Full-Stack Developer | UI/UX Enthusiast | Problem Solver
+                  <p className="text-foreground font-body mt-2">
+                    parneet29sandhu@gmail.com | +91 9988594850 | Bathinda, Punjab
                   </p>
                 </motion.div>
               </div>
@@ -94,14 +94,14 @@ export const ResumePage = () => {
                   >
                     <div className="flex items-center gap-3">
                       <span className="text-4xl">{section.icon}</span>
-                      <h4 className="text-2xl font-handwriting font-bold text-primary">
+                      <h4 className="text-2xl font-elegant font-bold text-primary">
                         {section.category}
                       </h4>
                     </div>
                     <ul className="space-y-2 pl-4">
                       {section.items.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-foreground font-display">
-                          <span className="text-primary mt-1">•</span>
+                        <li key={idx} className="flex items-start gap-2 text-foreground font-body">
+                          <span className="text-primary mt-1">★</span>
                           <span>{item}</span>
                         </li>
                       ))}
@@ -139,11 +139,11 @@ export const ResumePage = () => {
           >
             <Card className="p-6 text-center bg-primary/10 border-2 border-primary/30 hover:scale-105 transition-transform">
               <Sparkles className="w-8 h-8 text-primary mx-auto mb-2" />
-              <p className="text-3xl font-handwriting font-bold text-primary mb-1">
-                2+
+              <p className="text-3xl font-elegant font-bold text-primary mb-1">
+                3
               </p>
-              <p className="text-sm font-display text-foreground">
-                Years Experience
+              <p className="text-sm font-body text-foreground">
+                Internships
               </p>
             </Card>
           </motion.div>
@@ -155,11 +155,11 @@ export const ResumePage = () => {
           >
             <Card className="p-6 text-center bg-accent/10 border-2 border-accent/30 hover:scale-105 transition-transform">
               <FileText className="w-8 h-8 text-accent mx-auto mb-2" />
-              <p className="text-3xl font-handwriting font-bold text-accent mb-1">
-                PDF
+              <p className="text-3xl font-elegant font-bold text-accent mb-1">
+                7.93
               </p>
-              <p className="text-sm font-display text-foreground">
-                Format Available
+              <p className="text-sm font-body text-foreground">
+                CGPA
               </p>
             </Card>
           </motion.div>
@@ -171,11 +171,11 @@ export const ResumePage = () => {
           >
             <Card className="p-6 text-center bg-secondary/10 border-2 border-secondary/30 hover:scale-105 transition-transform">
               <Eye className="w-8 h-8 text-secondary mx-auto mb-2" />
-              <p className="text-3xl font-handwriting font-bold text-secondary mb-1">
-                ATS
+              <p className="text-3xl font-elegant font-bold text-secondary mb-1">
+                4
               </p>
-              <p className="text-sm font-display text-foreground">
-                Optimized
+              <p className="text-sm font-body text-foreground">
+                Projects
               </p>
             </Card>
           </motion.div>
@@ -188,8 +188,8 @@ export const ResumePage = () => {
           transition={{ delay: 1.6 }}
           className="text-center p-6 bg-accent/10 rounded-2xl border-2 border-accent/30"
         >
-          <p className="text-lg font-handwriting text-primary">
-            📬 Need a custom format? Just reach out and I'll send it your way! ✨
+          <p className="text-lg font-elegant text-primary">
+            📥 Click the button above to download my complete resume with all details! 
           </p>
         </motion.div>
       </div>

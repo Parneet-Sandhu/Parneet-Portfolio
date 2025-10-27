@@ -6,18 +6,6 @@ import { ScrapbookCard, PushPin, WashiTape, FloatingSticker } from "@/components
 export const EducationPage = () => {
   const education = [
     {
-      degree: "Bachelor of Technology",
-      major: "Computer Science and Engineering",
-      institution: "Maharaja Ranjit Singh Punjab Technical University, Bathinda",
-      period: "Aug 2021 – Jun 2025",
-      gpa: "7.93 CGPA",
-      highlights: [
-        "Relevant Coursework: Data Structures and Algorithms, Machine Learning, Database Management Systems, Data Mining, Operating Systems",
-        "Additional courses: Artificial Intelligence, Soft Computing, Object Oriented Programming, Theory of Computation, Computer Networks",
-        "Strong foundation in both theoretical concepts and practical applications",
-      ],
-    },
-    {
       degree: "Master of Technology",
       major: "Computer Science and Engineering (Cyber Security)",
       institution: "Central University of Punjab, Bathinda",
@@ -27,6 +15,18 @@ export const EducationPage = () => {
         "Specialization in Cyber Security",
         "Advanced studies in security protocols and ethical hacking",
         "Research-oriented program focusing on emerging security threats",
+      ],
+    },
+    {
+      degree: "Bachelor of Technology",
+      major: "Computer Science and Engineering",
+      institution: "Maharaja Ranjit Singh Punjab Technical University, Bathinda",
+      period: "Aug 2021 – Jun 2025",
+      gpa: "7.93 CGPA",
+      highlights: [
+        "Relevant Coursework: Data Structures and Algorithms, Machine Learning, Database Management Systems, Data Mining, Operating Systems",
+        "Additional courses: Artificial Intelligence, Soft Computing, Object Oriented Programming, Theory of Computation, Computer Networks",
+        "Strong foundation in both theoretical concepts and practical applications",
       ],
     },
   ];

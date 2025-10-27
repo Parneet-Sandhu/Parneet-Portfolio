@@ -73,11 +73,11 @@ export const InterestsPage = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-4"
         >
-          <h2 className="text-5xl md:text-6xl font-handwriting font-bold text-primary">
-            My Interests 💖
+          <h2 className="text-5xl md:text-6xl font-elegant font-bold text-primary">
+            My Interests 💫
           </h2>
-          <p className="text-xl text-muted-foreground font-display">
-            Beyond the code - what makes me who I am
+          <p className="text-xl text-muted-foreground font-body">
+            Beyond the code - what makes me, me!
           </p>
         </motion.div>
 
@@ -112,13 +112,13 @@ export const InterestsPage = () => {
                     {/* Icon and Title */}
                     <div className="flex items-center gap-3">
                       <Icon className="w-8 h-8 text-primary" />
-                      <h3 className="text-2xl font-handwriting font-bold text-primary">
+                      <h3 className="text-2xl font-elegant font-bold text-primary">
                         {interest.title}
                       </h3>
                     </div>
 
                     {/* Description */}
-                    <p className="text-foreground font-display text-sm leading-relaxed">
+                    <p className="text-foreground font-body text-sm leading-relaxed">
                       {interest.description}
                     </p>
 
@@ -127,7 +127,7 @@ export const InterestsPage = () => {
                       {interest.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="px-3 py-1 bg-background border border-accent/30 rounded-full text-xs font-display font-medium text-foreground"
+                          className="px-3 py-1 bg-background border border-accent/30 rounded-full text-xs font-body font-medium text-foreground"
                         >
                           {tag}
                         </span>
@@ -147,7 +147,7 @@ export const InterestsPage = () => {
           transition={{ delay: 0.8 }}
         >
           <Card className="p-6 md:p-8 bg-primary/10 border-4 border-primary/30 shadow-xl">
-            <h3 className="text-3xl font-handwriting font-bold text-primary mb-6 text-center">
+            <h3 className="text-3xl font-elegant font-bold text-primary mb-6 text-center">
               Fun Facts About Me 🎉
             </h3>
             <div className="grid md:grid-cols-2 gap-4">
@@ -160,7 +160,7 @@ export const InterestsPage = () => {
                   className="flex items-start gap-3 p-4 bg-card rounded-xl border-2 border-accent/20"
                 >
                   <span className="text-2xl">{fact.split(" ")[0]}</span>
-                  <p className="font-display text-foreground flex-1">
+                  <p className="font-body text-foreground flex-1">
                     {fact.split(" ").slice(1).join(" ")}
                   </p>
                 </motion.div>
@@ -176,8 +176,8 @@ export const InterestsPage = () => {
           transition={{ delay: 1.4 }}
           className="text-center p-6 bg-accent/10 rounded-2xl border-2 border-accent/30"
         >
-          <p className="text-2xl font-handwriting text-primary italic">
-            "Life is too short to not pursue what makes you happy" 🌈✨
+          <p className="text-2xl font-elegant text-primary italic">
+            "Life is about balance - code hard, play harder!" 🌈✨
           </p>
         </motion.div>
       </div>
