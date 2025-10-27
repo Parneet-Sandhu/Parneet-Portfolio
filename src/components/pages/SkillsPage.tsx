@@ -119,7 +119,7 @@ export const SkillsPage = () => {
                   )}
                   
                   <FloatingSticker 
-                    emoji={["✨", "💫", "⭐", "🌟"][categoryIndex % 4]} 
+                    emoji={["✨", "✨", "🌟", "🌟"][categoryIndex % 4]} 
                     className={`-top-4 ${categoryIndex % 2 === 0 ? '-right-4' : '-left-4'}`} 
                     delay={0.5 + categoryIndex * 0.1} 
                   />
