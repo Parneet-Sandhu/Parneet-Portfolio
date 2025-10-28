@@ -32,7 +32,7 @@ export const Navigation = ({ currentPage, setCurrentPage }: NavigationProps) => 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
           >
-            ✨ Parneet's Portfolio
+          🍓Parneet's Portfolio
           </motion.h1>
           
           {/* Simple arrow navigation for all screen sizes */}
