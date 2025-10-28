@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Home, User, GraduationCap, Briefcase, Code, FolderGit2, Award, Music, Heart, Mail, FileText } from "lucide-react";
+import { Home, User, GraduationCap, Briefcase, Code, FolderGit2, BookOpen, Music, Heart, Mail, FileText } from "lucide-react";
 
 interface NavigationProps {
   currentPage: number;
@@ -13,7 +13,7 @@ const pages = [
   { id: 3, icon: Briefcase, label: "Experience" },
   { id: 4, icon: Code, label: "Skills" },
   { id: 5, icon: FolderGit2, label: "Projects" },
-  { id: 6, icon: Award, label: "Certifications" },
+  { id: 6, icon: BookOpen, label: "Blog" },
   { id: 7, icon: Music, label: "Music" },
   { id: 8, icon: Heart, label: "Interests" },
   { id: 9, icon: Mail, label: "Contact" },

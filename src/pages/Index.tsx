@@ -7,7 +7,7 @@ import { EducationPage } from "@/components/pages/EducationPage";
 import { ExperiencePage } from "@/components/pages/ExperiencePage";
 import { SkillsPage } from "@/components/pages/SkillsPage";
 import { ProjectsPage } from "@/components/pages/ProjectsPage";
-import { CertificationsPage } from "@/components/pages/CertificationsPage";
+import { BlogPage } from "@/components/pages/BlogPage";
 import { MusicPage } from "@/components/pages/MusicPage";
 import { InterestsPage } from "@/components/pages/InterestsPage";
 import { ContactPage } from "@/components/pages/ContactPage";
@@ -23,7 +23,7 @@ const Index = () => {
     <ExperiencePage key="experience" />,
     <SkillsPage key="skills" />,
     <ProjectsPage key="projects" />,
-    <CertificationsPage key="certifications" />,
+    <BlogPage key="blog" />,
     <MusicPage key="music" />,
     <InterestsPage key="interests" />,
     <ContactPage key="contact" />,
