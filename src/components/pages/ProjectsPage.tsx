@@ -96,7 +96,7 @@ export const ProjectsPage = () => {
       description: "Designed a genetic feasibility tool using BLAST alignment and AI thresholds to evaluate the revival potential of extinct species. Deployed with Streamlit, Biopython, and Plotly.",
       tech: ["Python", "Streamlit", "Biopython", "Plotly", "BLAST"],
       image: deExtinctImage,
-      color: "bg-accent/10",
+      color: "bg-primary/10",
       date: "May 2025",
       github: "#",
     },
@@ -105,7 +105,7 @@ export const ProjectsPage = () => {
       description: "This project focuses on the digitization, recognition, and analysis of Egyptian hieroglyphs using machine learning. The model achieved an accuracy of 92% in recognizing and classifying various hieroglyphic symbols, demonstrating the potential of AI in preserving and understanding ancient scripts.",
       tech: ["Machine Learning", "Computer Vision", "Python", "TensorFlow", "Flask"],
       image: egyptianHieroglyphsImage,
-      color: "bg-primary/10",
+      color: "bg-accent/10",
       date: "May 2024",
       github: "https://github.com/Parneet-Sandhu/Egyptian-Hieroglyphs",
 

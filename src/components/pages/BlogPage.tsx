@@ -2,24 +2,25 @@ import { motion } from "framer-motion";
 import { BookOpen, ExternalLink, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrapbookCard, PushPin, WashiTape, FloatingSticker } from "@/components/ScrapbookDecorations";
-
+import virtualTryOnBlog from "@/assets/Vblog1.png";
+import DataBlog from "@/assets/Dblog2.png";
 export const BlogPage = () => {
   const blogs = [
     {
-      title: "My First Blog Post",
-      description: "An exciting journey into AI and Machine Learning. Exploring the fundamentals and sharing insights from my learning experience.",
-      date: "Coming Soon",
-      image: "📝",
-      link: "#", // User will add actual Medium link
-      tags: ["AI", "Machine Learning", "Tech"],
+      title: "Building a Virtual Try-On with Python, OpenCV, and Tkinter",
+      description: "Ever wanted to try on different accessories virtually? In this 6-minute read, I walk through creating a fun, interactive virtual try-on app using Python, OpenCV, Mediapipe, and Tkinter — where users can wear glasses or hats in real time through their webcam.",
+      date: "Nov 14, 2024",
+      image: virtualTryOnBlog,
+      link: "https://parneetsandhu.medium.com/building-a-virtual-try-on-with-python-opencv-and-tkinter-216173438c7a",
+      tags: ["OpenCV", "Python", "Virtual Try-On", "Mediapipe", "Tkinter"],
     },
     {
-      title: "My Second Blog Post",
-      description: "Deep dive into Data Science and its real-world applications. Discussing projects, challenges, and solutions.",
-      date: "Coming Soon",
-      image: "🤖",
-      link: "#", // User will add actual Medium link
-      tags: ["Data Science", "Python", "Analytics"],
+      title: "Data Analysis with YData Profiling: A Game Changer for Data Scientists",
+      description: "During my internship at Dosh.ai, I discovered YData Profiling — a tool that completely transformed how I explore and understand datasets. In this 4-minute read, I share how it simplifies EDA, improves data quality checks, and helps visualize insights with just a few lines of code.",
+      date: "Aug 19, 2024",
+      image: DataBlog,
+      link: "https://parneetsandhu.medium.com/data-analysis-with-ydata-profiling-a-game-changer-for-data-scientists-f93aaed73441",
+      tags: ["Data Science", "YData Profiling", "Visualization", "Machine Learning", "Internship Experience"],
     },
   ];
 
@@ -34,7 +35,7 @@ export const BlogPage = () => {
         >
           <h2 className="text-5xl md:text-6xl font-elegant font-bold text-primary flex items-center justify-center gap-3">
             <BookOpen className="w-12 h-12" />
-            My Blog ✍️
+            My Blog
           </h2>
           <p className="text-xl text-muted-foreground font-body">
             Sharing my thoughts and experiences on Medium
@@ -52,7 +53,7 @@ export const BlogPage = () => {
               whileHover={{ scale: 1.05, rotate: 0 }}
               className="relative"
             >
-              <ScrapbookCard 
+                           <ScrapbookCard 
                 className="p-6 bg-card shadow-scrapbook hover:shadow-paper transition-all h-full"
                 rotation={index % 2 === 0 ? -1.5 : 1.5}
               >
@@ -69,16 +70,16 @@ export const BlogPage = () => {
                 />
                 
                 {/* Blog Image Placeholder */}
-                <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg flex items-center justify-center mb-6 torn-edge shadow-sticker">
-                  <span className="text-8xl">{blog.image}</span>
+                <div className="w-full h-48 rounded-lg overflow-hidden mb-6 torn-edge shadow-sticker">
+                  <img 
+                    src={blog.image} 
+                    alt={blog.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
+                {/* Content */}
                 <div className="space-y-4">
-                  {/* Title */}
-                  <h3 className="text-2xl font-elegant font-bold text-primary">
-                    {blog.title}
-                  </h3>
-
                   {/* Date */}
                   <div className="flex items-center gap-2 text-muted-foreground font-body text-sm">
                     <Calendar className="w-4 h-4" />
@@ -119,9 +120,8 @@ export const BlogPage = () => {
                 {/* Corner stickers */}
                 <div className="absolute bottom-2 left-2 text-2xl opacity-30 sticker-shadow">📖</div>
                 <div className="absolute top-16 left-2 text-xl opacity-30 sticker-shadow">💡</div>
-              </ScrapbookCard>
-            </motion.div>
-          ))}
+              </ScrapbookCard>     
+              </motion.div>))}
         </div>
 
         {/* Call to action */}
@@ -132,7 +132,7 @@ export const BlogPage = () => {
           className="text-center p-8 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl border-2 border-primary/20"
         >
           <p className="text-xl font-elegant text-primary mb-4">
-            📚 More articles coming soon! 
+            More articles coming soon! 
           </p>
           <p className="text-base font-body text-muted-foreground">
             Follow me on Medium to stay updated with my latest posts

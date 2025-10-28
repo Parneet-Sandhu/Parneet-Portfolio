@@ -75,26 +75,6 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
               </Button>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
-              className="flex gap-4 pt-4"
-            >
-              <div className="bg-card p-4 rounded-2xl shadow-md border-2 border-accent/20">
-                <p className="text-3xl font-bold text-primary font-elegant">25+</p>
-                <p className="text-sm text-muted-foreground font-body">Projects</p>
-              </div>
-              <div className="bg-card p-4 rounded-2xl shadow-md border-2 border-accent/20">
-                <p className="text-3xl font-bold text-primary font-elegant">4</p>
-                <p className="text-sm text-muted-foreground font-body">Internships</p>
-              </div>
-              <div className="bg-card p-4 rounded-2xl shadow-md border-2 border-accent/20">
-                <p className="text-3xl font-bold text-primary font-elegant">7.93</p>
-                <p className="text-sm text-muted-foreground font-body">CGPA in Btech</p>
-              </div>
-            </motion.div>
-
             {/* Social Media Icons */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -103,7 +83,7 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
               className="flex gap-4 pt-6"
             >
               <a 
-                href="#" 
+                href="https://github.com/Parneet-Sandhu" 
                 className="w-12 h-12 bg-foreground text-background rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md"
                 aria-label="GitHub"
               >
@@ -112,7 +92,7 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
                 </svg>
               </a>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/parneetsandhu/" 
                 className="w-12 h-12 bg-foreground text-background rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md"
                 aria-label="LinkedIn"
               >
@@ -121,7 +101,7 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
                 </svg>
               </a>
               <a 
-                href="#" 
+                href="https://parneetsandhu.medium.com/" 
                 className="w-12 h-12 bg-foreground text-background rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md"
                 aria-label="Medium"
               >
@@ -130,7 +110,7 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
                 </svg>
               </a>
               <a 
-                href="#" 
+                href="https://x.com/__parneetsandhu" 
                 className="w-12 h-12 bg-foreground text-background rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md"
                 aria-label="Twitter"
               >
@@ -139,7 +119,7 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
                 </svg>
               </a>
               <a 
-                href="#" 
+                href="https://www.kaggle.com/parneetkaursandhu" 
                 className="w-12 h-12 bg-foreground text-background rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md"
                 aria-label="Kaggle"
               >
