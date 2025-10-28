@@ -37,18 +37,18 @@ export const ContactPage = () => {
     {
       name: "GitHub",
       icon: Github,
-      link: "https://github.com",
+      link: "https://github.com/Parneet-Sandhu",
       color: "text-secondary",
       bgColor: "bg-secondary/10",
-      handle: "🔗 Add your GitHub link",
+      handle: "Parneet-Sandhu",
     },
     {
       name: "LinkedIn",
       icon: Linkedin,
-      link: "https://linkedin.com",
+      link: "https://www.linkedin.com/in/parneetsandhu/",
       color: "text-accent",
       bgColor: "bg-accent/10",
-      handle: "🔗 Add your LinkedIn",
+      handle: "Parneet Kaur Sandhu",
     },
     {
       name: "Phone",
@@ -106,7 +106,7 @@ export const ContactPage = () => {
                   </label>
                   <Input
                     type="text"
-                    placeholder="John Doe"
+                    placeholder="Enter your name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     required
@@ -119,7 +119,7 @@ export const ContactPage = () => {
                   </label>
                   <Input
                     type="email"
-                    placeholder="john@example.com"
+                    placeholder="abc@example.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     required
@@ -198,7 +198,7 @@ export const ContactPage = () => {
             >
               <Card className="p-6 bg-accent/10 border-4 border-accent/30 shadow-xl text-center">
                 <p className="text-2xl font-elegant font-bold text-primary mb-2">
-                  Currently Available! ✨
+                  Currently Available! 
                 </p>
                 <p className="text-foreground font-body">
                   Open for internships, freelance projects, and collaborations!
@@ -216,7 +216,7 @@ export const ContactPage = () => {
           className="text-center p-6 bg-card rounded-2xl border-2 border-accent/20"
         >
           <p className="text-lg font-elegant text-primary">
-            ⚡ I usually respond within 24 hours! Looking forward to hearing from you! 💫
+            I usually respond within 24 hours! Looking forward to hearing from you!
           </p>
         </motion.div>
       </div>

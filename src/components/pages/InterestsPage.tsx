@@ -1,26 +1,27 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { Camera, Book, Gamepad2, Plane, Sparkles, Coffee } from "lucide-react";
+import { Camera, Book, Gamepad2, Plane, Sparkles, Coffee,Bot,Clapperboard } from "lucide-react";
 import { ScrapbookCard, PushPin, WashiTape, PaperClip, FloatingSticker } from "@/components/ScrapbookDecorations";
 
 export const InterestsPage = () => {
   const interests = [
     {
-      title: "Photography",
-      icon: Camera,
-      description: "Capturing moments and experimenting with different perspectives. Love shooting landscapes and tech setups!",
-      emoji: "📸",
+      title: "AI & Data",
+      icon: Bot,
+      description: "Obsessed with patterns, predictions, and possibilities. Whether it’s training models, cleaning messy data, or experimenting with new ML frameworks — I live for those aha! moments when data finally makes sense.",
+      emoji: "🤖",
       color: "bg-primary/10",
-      tags: ["Nature", "Tech", "Street"],
+      tags: ["Machine Learning","NLP","Computer Vision"],
     },
-    {
-      title: "Reading",
-      icon: Book,
-      description: "From sci-fi novels to tech blogs, I'm always reading something new. Currently into fantasy and self-improvement!",
-      emoji: "📚",
-      color: "bg-accent/10",
-      tags: ["Fantasy", "Tech", "Biography"],
-    },
+      {
+        title: "Movies & Series",
+        icon: Clapperboard,
+        description: "Marvel nerd and anime lover! From multiverse chaos to deep anime arcs — I live for cinematic worlds, strong characters, and stories that hit both heart and brain.",
+        emoji: "🎥",
+        color: "bg-accent/10",
+        tags: ["Marvel", "Anime", "Action"],
+      },
+
     {
       title: "Gaming",
       icon: Gamepad2,
@@ -55,14 +56,15 @@ export const InterestsPage = () => {
     },
   ];
 
-  const funFacts = [
-    "🎯 Can solve a Rubik's cube in under 2 minutes",
-    "🌟 Binge-watched 5 tech YouTube channels last month",
-    "💡 Have 27+ project ideas in my notes app",
-    "🎭 Love attending tech meetups and hackathons",
-    "🌱 Currently learning Japanese (まだまだです!)",
-    "🎵 Created a 10-hour coding playlist",
-  ];
+const funFacts = [
+  "⚡ Can turn a random idea into a project within 24 hours (and yes, it usually works 😏)",
+  "🧠 I’ve got over 50+ unfinished but genius ideas sleeping in my notes app",
+  "🎨 Love mixing science, art, and aesthetics — think data with personality",
+  "☕ I once trained a model all night just for fun (and coffee was my only friend)",
+  "🎧 Created my own 'focus' playlists that hit harder than caffeine",
+  "👗 Dream collab? Tech × Fashion × AI — the future’s wearable 🤖",
+];
+
 
   return (
     <div className="min-h-screen p-4 md:p-8">

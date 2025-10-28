@@ -72,10 +72,10 @@ const Index = () => {
 
       {/* Floating decorations - more scattered and varied */}
       <div className="fixed bottom-8 right-8 text-5xl animate-bounce-soft pointer-events-none opacity-40 hidden lg:block sticker-shadow">
-        ✨
+        🍓
       </div>
       <div className="fixed top-32 left-8 text-4xl animate-float pointer-events-none opacity-35 hidden lg:block sticker-shadow">
-        💫
+        🍓
       </div>
       <div className="fixed top-1/3 right-12 text-3xl animate-wiggle pointer-events-none opacity-30 hidden lg:block sticker-shadow">
         🌸
