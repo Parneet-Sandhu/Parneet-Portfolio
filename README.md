@@ -1,73 +1,81 @@
-# Welcome to your Lovable project
+# 🌸 Parneet Kaur Sandhu's Portfolio
 
-## Project info
+A scrapbook-style personal portfolio showcasing my journey as an AI Engineer and Computer Science student. Built with React, TypeScript, and Tailwind CSS, featuring playful animations and interactive elements.
 
-**URL**: https://lovable.dev/projects/194609ac-ad97-4e2b-b389-e7c3cf834392
+## 🚀 Features
 
-## How can I edit this code?
+- **Interactive Navigation**: Smooth page transitions with framer-motion animations
+- **Scrapbook Design**: Unique visual style with decorative elements like pins, tape, and stickers
+- **Responsive Layout**: Fully responsive design that works on all devices
+- **Dark/Light Mode**: Automatic theme detection and switching
+- **Performance Optimized**: Fast loading times and smooth animations
+- **Interactive Sections**:
+  - About Me - Personal introduction with animated elements
+  - Projects - Showcase of key projects with hover effects
+  - Skills - Visual representation of technical skills
+  - Experience - Professional journey timeline
+  - Contact - Easy ways to connect
 
-There are several ways of editing your application.
+## 💻 Tech Stack
 
-**Use Lovable**
+- **Frontend Framework**: React 18
+- **Type Safety**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Build Tool**: Vite
+- **Linting**: ESLint
+- **Package Manager**: npm/yarn/pnpm
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/194609ac-ad97-4e2b-b389-e7c3cf834392) and start prompting.
+## 🛠️ Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js (v18 or higher)
+- npm, yarn, or pnpm
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🎨 Customization
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Updating Content
 
-Follow these steps:
+- **Personal Information**: Edit `src/App.tsx` and update the component data
+- **Projects**: Modify the projects array in the Projects section
+- **Skills**: Update the skills list in the Skills component
+- **Styling**: Customize colors and styles in `tailwind.config.js`
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Adding New Sections
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1. Create a new component in `src/components/`
+2. Import and add it to `App.tsx`
+3. Update the navigation in the Sidebar component
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+## 📁 Project Structure
+```
+portfolio/
+├── public/             # Static assets
+├── src/
+│   ├── components/     # React components
+│   │   └── ui/        # shadcn/ui components
+│   ├── lib/           # Utility functions
+│   ├── App.tsx        # Main application component
+│   ├── main.tsx       # Application entry point
+│   └── index.css      # Global styles
+├── index.html         # HTML template
+├── package.json       # Dependencies and scripts
+├── tsconfig.json      # TypeScript configuration
+├── vite.config.ts     # Vite configuration
+└── tailwind.config.js # Tailwind CSS configuration
 ```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
 
-**Use GitHub Codespaces**
+## 🙏 Acknowledgments
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- Design inspiration from scrapbook and journal aesthetics
+- [shadcn/ui](https://ui.shadcn.com/) for beautiful UI components
+- [Framer Motion](https://www.framer.com/motion/) for smooth animations
+- [Lucide](https://lucide.dev/) for beautiful icons
 
-## What technologies are used for this project?
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/194609ac-ad97-4e2b-b389-e7c3cf834392) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Made with 💖 by Parneet Kaur Sandhu
