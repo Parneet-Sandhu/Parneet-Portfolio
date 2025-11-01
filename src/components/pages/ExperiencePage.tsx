@@ -26,7 +26,7 @@ export const ExperiencePage = () => {
       role: "Product Evaluator (Remote)",
       company: "Phia",
       location: "New York, NY",
-      period: "Sep 2024 – Present",
+      period: "Sep 2024 – Feb 2025",
       description: "Evaluated and analyzed the performance of Phia products",
       achievements: [
         "Evaluated and analyzed the performance of Phia products",
