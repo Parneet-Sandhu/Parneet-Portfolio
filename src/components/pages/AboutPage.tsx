@@ -52,14 +52,19 @@ export const AboutPage = () => {
                   Hey there!
                 </h3>
                 <p className="text-lg font-body leading-relaxed text-foreground">
-                  I'm Parneet Kaur Sandhu, an AI Engineer and Computer Science student from Bathinda, Punjab! 
-                  Currently pursuing my M.Tech CSE in Cyber Security at Central University of Punjab in 2025.
+                  I’m Parneet Kaur Sandhu, your friendly AI engineer from Bathinda, Punjab. currently vibing my way through M.Tech CSE in Cyber Security at the Central University of Punjab (2025).
+                  I’m kinda obsessed with all things AI, ML, and Cyber Security .. basically, if it’s smart tech or slightly chaotic data, i’m in!!
+
                 </p>
                 <p className="text-lg font-body leading-relaxed text-foreground">
-                  I specialize in AI engineering, machine learning, and Cyber Security.I work across data science, machine learning, and creative tech, blending analytical thinking with design and storytelling. Whether it’s training models, building intelligent systems, or crafting something visually unique, I love exploring the intersection of technology and imagination.When I’m not deep into code, you’ll find me designing, brainstorming new tech ideas, or just enjoying the calm chaos of creativity. I believe innovation doesn’t have to look serious — it can be playful, powerful, and full of personality. 
+                  I love mixing tech, design, and creativity ; one day i’m training models, the next i’m sketching ideas or building something that makes people go “wait, you made that?!”
+
+                  I did my AI engineering internship at CarDekho Group, where i built conversational AI features and RAG-based chatbots (yeah, my bots actually get you ,ahaa!!!).
                   
                   I've worked at Cardekho Group as an AI Engineering Intern, where I built conversational AI features and RAG-based 
                   chatbots. I'm passionate about NLP, Deep Learning, and creating innovative solutions! 
+
+                  When i’m not lost in code, i’m probably designing something aesthetic, daydreaming new projects, or just embracing the calm chaos of creativity. innovation doesn’t have to wear a suit...sometimes it’s pink, sparkly, and full of personality
                 </p>
               </div>
 
