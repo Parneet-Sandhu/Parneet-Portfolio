@@ -34,10 +34,13 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <h1 className="text-5xl md:text-7xl font-elegant font-bold text-primary leading-tight">
-                Hello! 
+              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+                <span className="magazine-word font-marker text-[hsl(343,90%,61%)]">Hello!</span>
                 <br />
-                <span className="text-foreground">I'm Parneet Kaur Sandhu</span>
+                <span className="magazine-word font-rock text-[hsl(271,76%,53%)]">I'm</span>
+                <span className="magazine-word font-gloria text-[hsl(189,94%,43%)]">Parneet</span>
+                <span className="magazine-word font-shadow text-[hsl(142,71%,45%)]">Kaur</span>
+                <span className="magazine-word font-architect text-[hsl(45,93%,47%)]">Sandhu</span>
               </h1>
             </motion.div>
 

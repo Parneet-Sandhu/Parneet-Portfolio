@@ -250,6 +250,99 @@ All colors MUST be HSL.
     inset: 8px -8px -8px 8px;
     opacity: 0.7;
   }
+
+  /* Magazine Cutout Heading Styles */
+  .magazine-heading {
+    @apply font-scrapbook text-transparent bg-clip-text;
+    background-image: linear-gradient(135deg, 
+      hsl(343 90% 61%), 
+      hsl(271 76% 53%), 
+      hsl(189 94% 43%),
+      hsl(142 71% 45%)
+    );
+    filter: drop-shadow(3px 3px 0px rgba(0,0,0,0.2));
+    letter-spacing: 0.05em;
+  }
+
+  .magazine-word {
+    display: inline-block;
+    padding: 0.2em 0.4em;
+    margin: 0.1em 0.2em;
+    transform: rotate(var(--rotation, 0deg));
+    transition: transform 0.3s ease;
+  }
+
+  .magazine-word:nth-child(1) { 
+    --rotation: -2deg;
+    @apply font-marker;
+    color: hsl(343 90% 61%);
+  }
+  
+  .magazine-word:nth-child(2) { 
+    --rotation: 1deg;
+    @apply font-rock;
+    color: hsl(271 76% 53%);
+  }
+  
+  .magazine-word:nth-child(3) { 
+    --rotation: -1deg;
+    @apply font-gloria;
+    color: hsl(189 94% 43%);
+  }
+  
+  .magazine-word:nth-child(4) { 
+    --rotation: 2deg;
+    @apply font-shadow;
+    color: hsl(142 71% 45%);
+  }
+
+  .magazine-word:nth-child(5) { 
+    --rotation: -1.5deg;
+    @apply font-architect;
+    color: hsl(45 93% 47%);
+  }
+
+  .magazine-word:nth-child(6) { 
+    --rotation: 1.5deg;
+    @apply font-marker;
+    color: hsl(14 91% 56%);
+  }
+
+  .magazine-word:hover {
+    transform: rotate(0deg) scale(1.05);
+  }
+
+  .cutout-letter {
+    display: inline-block;
+    padding: 0.1em 0.15em;
+    margin: 0 0.05em;
+    transform: rotate(var(--letter-rotation, 0deg));
+    background: var(--letter-bg, hsl(343 90% 61%));
+    color: white;
+    border-radius: 4px;
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.15), 
+                inset -1px -1px 2px rgba(0,0,0,0.1);
+  }
+
+  .cutout-letter:nth-child(odd) {
+    --letter-rotation: -3deg;
+  }
+
+  .cutout-letter:nth-child(even) {
+    --letter-rotation: 2deg;
+  }
+
+  .cutout-letter:nth-child(3n) {
+    --letter-bg: hsl(271 76% 53%);
+  }
+
+  .cutout-letter:nth-child(3n+1) {
+    --letter-bg: hsl(189 94% 43%);
+  }
+
+  .cutout-letter:nth-child(3n+2) {
+    --letter-bg: hsl(142 71% 45%);
+  }
 }
 
 @layer base {

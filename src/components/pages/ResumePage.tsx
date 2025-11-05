@@ -62,9 +62,10 @@ export const ResumePage = () => {
             ✨
           </motion.span>
           
-          <h2 className="text-5xl md:text-6xl font-elegant font-bold text-primary flex items-center justify-center gap-3">
-            <FileText className="w-12 h-12" />
-            Resume 📄
+          <h2 className="text-5xl md:text-6xl font-bold flex items-center justify-center gap-3 flex-wrap">
+            <FileText className="w-12 h-12 text-[hsl(343,90%,61%)]" />
+            <span className="magazine-word font-marker text-[hsl(343,90%,61%)]">Resume</span>
+            <span className="magazine-word font-rock text-[hsl(271,76%,53%)]">📄</span>
           </h2>
           <p className="text-xl text-muted-foreground font-body">
             Download my complete professional profile

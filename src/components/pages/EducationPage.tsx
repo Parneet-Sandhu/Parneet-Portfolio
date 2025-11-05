@@ -39,9 +39,10 @@ export const EducationPage = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-4"
         >
-          <h2 className="text-5xl md:text-6xl font-elegant font-bold text-primary flex items-center justify-center gap-3">
-            <GraduationCap className="w-12 h-12" />
-            Education 
+          <h2 className="text-5xl md:text-6xl font-bold flex items-center justify-center gap-3 flex-wrap">
+            <GraduationCap className="w-12 h-12 text-[hsl(343,90%,61%)]" />
+            <span className="magazine-word font-marker text-[hsl(343,90%,61%)]">Education</span>
+            <span className="magazine-word font-rock text-[hsl(271,76%,53%)]">📚</span>
           </h2>
           <p className="text-xl text-muted-foreground font-body">
             My academic journey and learning path

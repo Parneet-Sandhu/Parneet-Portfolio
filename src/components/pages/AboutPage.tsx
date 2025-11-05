@@ -20,8 +20,10 @@ export const AboutPage = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-4"
         >
-          <h2 className="text-5xl md:text-6xl font-elegant font-bold text-primary">
-            About Me 💌
+          <h2 className="text-5xl md:text-6xl font-bold">
+            <span className="magazine-word font-marker text-[hsl(343,90%,61%)]">About</span>
+            <span className="magazine-word font-rock text-[hsl(271,76%,53%)]">Me</span>
+            <span className="magazine-word font-gloria text-[hsl(189,94%,43%)]">💌</span>
           </h2>
           <p className="text-xl text-muted-foreground font-body">
             I fix problems you didn’t know existed in ways you wouldn’t understand
@@ -47,9 +49,10 @@ export const AboutPage = () => {
             <div className="space-y-6">
               {/* Intro */}
               <div className="space-y-4">
-                <h3 className="text-3xl font-elegant font-bold text-primary flex items-center gap-2">
-                  <Sparkles className="w-8 h-8" />
-                  Hey there!
+                <h3 className="text-3xl font-bold flex items-center gap-2 flex-wrap">
+                  <Sparkles className="w-8 h-8 text-[hsl(343,90%,61%)]" />
+                  <span className="magazine-word font-marker text-[hsl(343,90%,61%)]">Hey</span>
+                  <span className="magazine-word font-rock text-[hsl(271,76%,53%)]">there!</span>
                 </h3>
                 <p className="text-lg font-body leading-relaxed text-foreground">
                   I’m Parneet Kaur Sandhu, your friendly AI engineer from Bathinda, Punjab. currently vibing my way through M.Tech CSE in Cyber Security at the Central University of Punjab (2025).
@@ -70,8 +73,12 @@ export const AboutPage = () => {
 
               {/* Personality Traits */}
               <div className="space-y-3">
-                <h4 className="text-2xl font-elegant font-bold text-secondary">
-                  What makes me, me? 🌟
+                <h4 className="text-2xl font-bold flex flex-wrap">
+                  <span className="magazine-word font-shadow text-[hsl(142,71%,45%)]">What</span>
+                  <span className="magazine-word font-marker text-[hsl(343,90%,61%)]">makes</span>
+                  <span className="magazine-word font-rock text-[hsl(271,76%,53%)]">me,</span>
+                  <span className="magazine-word font-gloria text-[hsl(189,94%,43%)]">me?</span>
+                  <span className="magazine-word font-architect text-[hsl(45,93%,47%)]">🌟</span>
                 </h4>
                 <div className="flex flex-wrap gap-3">
                   {["AI Enthusiast", "Problem Solver", "Team Player", "Fast Learner", "Detail-Oriented"].map((trait, index) => (

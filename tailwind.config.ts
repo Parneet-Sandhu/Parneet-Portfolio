@@ -112,6 +112,12 @@ export default {
         'display': ['Quicksand', 'sans-serif'],
         'elegant': ['Playfair Display', 'serif'],
         'body': ['Cormorant Garamond', 'serif'],
+        'scrapbook': ['Cabin Sketch', 'cursive'],
+        'marker': ['Permanent Marker', 'cursive'],
+        'rock': ['Rock Salt', 'cursive'],
+        'gloria': ['Gloria Hallelujah', 'cursive'],
+        'shadow': ['Shadows Into Light', 'cursive'],
+        'architect': ['Architects Daughter', 'cursive'],
       },
       boxShadow: {
         'scrapbook': '4px 4px 0px rgba(0,0,0,0.1), 8px 8px 0px rgba(0,0,0,0.05)',
