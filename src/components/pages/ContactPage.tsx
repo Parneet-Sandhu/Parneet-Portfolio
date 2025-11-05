@@ -69,10 +69,8 @@ export const ContactPage = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-4"
         >
-          <h2 className="text-5xl md:text-6xl font-bold flex flex-wrap items-center justify-center gap-3">
-            <span className="magazine-word font-marker text-[hsl(343,90%,61%)]">Let's</span>
-            <span className="magazine-word font-rock text-[hsl(271,76%,53%)]">Connect!</span>
-            <span className="magazine-word font-gloria text-[hsl(189,94%,43%)]">💌</span>
+          <h2 className="text-5xl md:text-6xl font-elegant font-bold text-primary">
+            Let's Connect! 💌
           </h2>
           <p className="text-xl text-muted-foreground font-body">
             Have a project in mind? Want to collaborate? Just say hi!

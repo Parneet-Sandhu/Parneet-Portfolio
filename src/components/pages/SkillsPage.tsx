@@ -89,11 +89,8 @@ export const SkillsPage = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-4"
         >
-          <h2 className="text-5xl md:text-6xl font-bold flex flex-wrap items-center justify-center gap-3">
-            <span className="magazine-word font-marker text-[hsl(343,90%,61%)]">Skills</span>
-            <span className="magazine-word font-rock text-[hsl(271,76%,53%)]">&</span>
-            <span className="magazine-word font-gloria text-[hsl(189,94%,43%)]">Tech</span>
-            <span className="magazine-word font-shadow text-[hsl(142,71%,45%)]">Stack</span>
+          <h2 className="text-5xl md:text-6xl font-elegant font-bold text-primary">
+            Skills & Tech Stack 
           </h2>
           <p className="text-xl text-muted-foreground font-body">
             My toolbox of technologies and expertise
