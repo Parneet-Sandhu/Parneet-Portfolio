@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
-import { Card } from "@/components/ui/card";
 import { Briefcase, Calendar, MapPin } from "lucide-react";
-import { ScrapbookCard, PushPin, WashiTape, PaperClip, FloatingSticker } from "@/components/ScrapbookDecorations";
 
 export const ExperiencePage = () => {
   const experiences = [
-      {
+    {
       role: "AI Engineering Intern",
       company: "Cardekho Group",
       location: "Gurugram",
@@ -76,11 +74,11 @@ export const ExperiencePage = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-4"
         >
-          <h2 className="text-5xl md:text-6xl font-elegant font-bold text-primary flex items-center justify-center gap-3">
+          <h2 className="text-5xl md:text-6xl font-title text-primary tracking-wide flex items-center justify-center gap-3">
             <Briefcase className="w-12 h-12" />
             Experience 💼
           </h2>
-          <p className="text-xl text-muted-foreground font-body">
+          <p className="text-xl font-cursive text-secondary">
             Where I've worked and what I've built
           </p>
         </motion.div>
@@ -95,49 +93,27 @@ export const ExperiencePage = () => {
               transition={{ delay: 0.2 + index * 0.15 }}
               className="relative"
             >
-              <ScrapbookCard 
-                className="p-6 md:p-8 bg-card shadow-scrapbook hover:shadow-paper transition-all" 
-                rotation={[-0.5, 0.5, -0.5][index % 3]}
-              >
-                {/* Scrapbook decorations */}
-                {index % 2 === 0 ? (
-                  <>
-                    <PushPin className="top-4 right-6" />
-                    <PaperClip className="top-6 left-6" />
-                  </>
-                ) : (
-                  <>
-                    <PushPin className="top-4 left-6" />
-                    <WashiTape className="top-0 right-1/4 w-1/3" color="accent" />
-                  </>
-                )}
-                
-                <FloatingSticker 
-                  emoji={index === 0 ? "💼" : index === 1 ? "💻" : "🎯"} 
-                  className={`-top-4 ${index % 2 === 0 ? '-right-4' : '-left-4'}`} 
-                  delay={0.3 + index * 0.1} 
-                />
-
+              <div className="section-card">
                 <div className="space-y-4">
                   {/* Role and Company */}
                   <div>
-                    <h3 className="text-2xl md:text-3xl font-elegant font-bold text-primary">
+                    <h3 className="text-2xl md:text-3xl font-title text-primary">
                       {exp.role}
                     </h3>
-                    <p className="text-xl font-body font-semibold text-secondary">
+                    <p className="text-xl font-display font-semibold text-secondary">
                       {exp.company}
                     </p>
                   </div>
 
                   {/* Meta info */}
                   <div className="flex flex-wrap gap-4 text-sm">
-                    <div className="flex items-center gap-2 bg-accent/20 px-3 py-1 rounded-full">
+                    <div className="flex items-center gap-2 bg-accent/30 px-3 py-1 rounded-full">
                       <Calendar className="w-4 h-4 text-primary" />
-                      <span className="font-body text-foreground">{exp.period}</span>
+                      <span className="font-display text-foreground">{exp.period}</span>
                     </div>
-                    <div className="flex items-center gap-2 bg-accent/20 px-3 py-1 rounded-full">
+                    <div className="flex items-center gap-2 bg-accent/30 px-3 py-1 rounded-full">
                       <MapPin className="w-4 h-4 text-primary" />
-                      <span className="font-body text-foreground">{exp.location}</span>
+                      <span className="font-display text-foreground">{exp.location}</span>
                     </div>
                   </div>
 
@@ -148,7 +124,7 @@ export const ExperiencePage = () => {
 
                   {/* Achievements */}
                   <div className="space-y-2">
-                    <h4 className="font-body font-semibold text-foreground">
+                    <h4 className="font-display font-semibold text-foreground">
                       Key Achievements:
                     </h4>
                     <ul className="space-y-2">
@@ -175,14 +151,14 @@ export const ExperiencePage = () => {
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.6 + index * 0.15 + idx * 0.05 }}
-                        className="px-3 py-1 bg-primary/10 border border-primary/30 rounded-full text-sm font-body font-medium text-primary"
+                        className="tag-pill text-sm"
                       >
                         {tech}
                       </motion.span>
                     ))}
                   </div>
                 </div>
-              </ScrapbookCard>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -192,9 +168,9 @@ export const ExperiencePage = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
-          className="text-center p-6 bg-primary/10 rounded-2xl border-2 border-primary/30"
+          className="text-center p-6 bg-primary/10 rounded-3xl border-2 border-primary/30"
         >
-          <p className="text-lg font-elegant text-primary">
+          <p className="text-lg font-cursive text-primary">
             ✨ Always open to new opportunities and exciting projects! Let's build something amazing together! 🚀
           </p>
         </motion.div>

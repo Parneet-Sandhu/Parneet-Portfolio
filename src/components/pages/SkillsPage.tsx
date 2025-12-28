@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
-import { Card } from "@/components/ui/card";
 import { Code2, Wrench, Package, Database } from "lucide-react";
-import { ScrapbookCard, PushPin, WashiTape, FloatingSticker } from "@/components/ScrapbookDecorations";
 
 export const SkillsPage = () => {
   const skillCategories = [
@@ -24,7 +22,7 @@ export const SkillsPage = () => {
       title: "AI/ML & Data Science",
       icon: Database,
       color: "text-accent",
-      bgColor: "bg-accent/10",
+      bgColor: "bg-accent/20",
       skills: [
         { name: "TensorFlow", level: 90 },
         { name: "PyTorch", level: 88 },
@@ -40,7 +38,7 @@ export const SkillsPage = () => {
       title: "Web Technologies",
       icon: Package,
       color: "text-secondary",
-      bgColor: "bg-secondary/10",
+      bgColor: "bg-secondary/20",
       skills: [
         { name: "Django", level: 85 },
         { name: "Flask", level: 87 },
@@ -89,10 +87,10 @@ export const SkillsPage = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-4"
         >
-          <h2 className="text-5xl md:text-6xl font-elegant font-bold text-primary">
+          <h2 className="text-5xl md:text-6xl font-title text-primary tracking-wide">
             Skills & Tech Stack 
           </h2>
-          <p className="text-xl text-muted-foreground font-body">
+          <p className="text-xl font-cursive text-secondary">
             My toolbox of technologies and expertise
           </p>
         </motion.div>
@@ -109,24 +107,11 @@ export const SkillsPage = () => {
                 transition={{ delay: 0.2 + categoryIndex * 0.1 }}
                 className="relative"
               >
-                <ScrapbookCard 
-                  className={`p-6 ${category.bgColor} shadow-scrapbook hover:shadow-paper transition-all h-full`}
-                  rotation={[-1, 0.5, -0.5, 1][categoryIndex % 4]}
-                >
-                  <PushPin className={`top-2 ${categoryIndex % 2 === 0 ? 'right-4' : 'left-4'}`} />
-                  {categoryIndex % 2 === 0 && (
-                    <WashiTape className="top-0 left-1/3 w-1/3" color="accent" />
-                  )}
-                  
-                  <FloatingSticker 
-                    emoji={["✨", "✨", "🌟", "🌟"][categoryIndex % 4]} 
-                    className={`-top-4 ${categoryIndex % 2 === 0 ? '-right-4' : '-left-4'}`} 
-                    delay={0.5 + categoryIndex * 0.1} 
-                  />
+                <div className={`section-card ${category.bgColor} h-full`}>
                   {/* Category Header */}
                   <div className="flex items-center gap-3 mb-6">
                     <Icon className={`w-8 h-8 ${category.color}`} />
-                    <h3 className="text-xl font-elegant font-bold text-foreground">
+                    <h3 className="text-xl font-title text-foreground">
                       {category.title}
                     </h3>
                   </div>
@@ -144,14 +129,14 @@ export const SkillsPage = () => {
                         className="space-y-2"
                       >
                         <div className="flex justify-between items-center">
-                          <span className="font-body font-medium text-foreground">
+                          <span className="font-display font-medium text-foreground">
                             {skill.name}
                           </span>
-                          <span className="text-sm font-body text-muted-foreground">
+                          <span className="text-sm font-display text-muted-foreground">
                             {skill.level}%
                           </span>
                         </div>
-                        <div className="h-2 bg-background rounded-full overflow-hidden">
+                        <div className="h-3 bg-background/50 rounded-full overflow-hidden">
                           <motion.div
                             initial={{ width: 0 }}
                             animate={{ width: `${skill.level}%` }}
@@ -166,7 +151,7 @@ export const SkillsPage = () => {
                       </motion.div>
                     ))}
                   </div>
-                </ScrapbookCard>
+                </div>
               </motion.div>
             );
           })}
@@ -178,24 +163,24 @@ export const SkillsPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
         >
-          <Card className="p-6 md:p-8 bg-card border-4 border-primary/20 shadow-xl">
-            <h3 className="text-2xl font-elegant font-bold text-primary mb-6 text-center">
+          <div className="section-card">
+            <h3 className="text-2xl font-title text-primary mb-6 text-center">
               Data Science & AI Expertise ✨
             </h3>
             <div className="flex flex-wrap gap-3 justify-center">
               {dataSkills.map((skill, index) => (
                 <motion.span
                   key={skill}
-                  initial={{ opacity: 0, scale: 0, rotate: -10 }}
-                  animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 1 + index * 0.05 }}
-                  className="px-4 py-2 bg-primary/10 border-2 border-primary/30 rounded-full text-primary font-body font-semibold hover:scale-110 transition-transform cursor-default"
+                  className="tag-pill hover:scale-110 transition-transform cursor-default"
                 >
                   {skill}
                 </motion.span>
               ))}
             </div>
-          </Card>
+          </div>
         </motion.div>
 
         {/* Fun fact */}
@@ -203,9 +188,9 @@ export const SkillsPage = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
-          className="text-center p-6 bg-accent/10 rounded-2xl"
+          className="text-center p-6 bg-accent/20 rounded-3xl"
         >
-          <p className="text-lg font-elegant text-primary">
+          <p className="text-lg font-cursive text-primary">
             🌱 Always learning and adding new skills to my arsenal! Currently mastering Cyber Security! 🚀🔐
           </p>
         </motion.div>
