@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
-import { Card } from "@/components/ui/card";
 import { GraduationCap, BookOpen, Award } from "lucide-react";
-import { ScrapbookCard, PushPin, WashiTape, FloatingSticker } from "@/components/ScrapbookDecorations";
 
 export const EducationPage = () => {
   const education = [
@@ -39,11 +37,11 @@ export const EducationPage = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-4"
         >
-          <h2 className="text-5xl md:text-6xl font-elegant font-bold text-primary flex items-center justify-center gap-3">
+          <h2 className="text-5xl md:text-6xl font-title text-primary tracking-wide flex items-center justify-center gap-3">
             <GraduationCap className="w-12 h-12" />
             Education 
           </h2>
-          <p className="text-xl text-muted-foreground font-body">
+          <p className="text-xl font-cursive text-secondary">
             My academic journey and learning path
           </p>
         </motion.div>
@@ -58,32 +56,20 @@ export const EducationPage = () => {
               transition={{ delay: 0.2 + index * 0.2 }}
               className="relative"
             >
-              <ScrapbookCard 
-                className="p-6 md:p-8 bg-card shadow-scrapbook" 
-                rotation={index % 2 === 0 ? -0.5 : 0.5}
-              >
-                <PushPin className={`top-4 ${index % 2 === 0 ? 'right-8' : 'left-8'}`} />
-                <WashiTape className={`top-0 w-1/3 ${index % 2 === 0 ? 'left-1/4' : 'right-1/4'} rotate-[${index % 2 === 0 ? '-2' : '2'}deg]`} color={index % 2 === 0 ? "primary" : "accent"} />
-                
-                <FloatingSticker 
-                  emoji={index === 0 ? "🎓" : "📖"} 
-                  className={`-top-6 ${index % 2 === 0 ? '-right-6' : '-left-6'}`} 
-                  delay={0.4 + index * 0.2} 
-                />
-
+              <div className="section-card">
                 <div className="space-y-4">
                   {/* Degree and Period */}
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
                     <div>
-                      <h3 className="text-2xl md:text-3xl font-elegant font-bold text-primary">
+                      <h3 className="text-2xl md:text-3xl font-title text-primary">
                         {edu.degree}
                       </h3>
-                      <p className="text-xl font-body font-semibold text-secondary">
+                      <p className="text-xl font-display font-semibold text-secondary">
                         {edu.major}
                       </p>
                     </div>
                     <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
-                      <span className="text-sm font-body font-semibold text-primary">
+                      <span className="text-sm font-display font-semibold text-primary">
                         {edu.period}
                       </span>
                     </div>
@@ -98,14 +84,14 @@ export const EducationPage = () => {
                   {/* GPA */}
                   <div className="flex items-center gap-2">
                     <Award className="w-5 h-5 text-primary" />
-                    <span className="font-body font-semibold text-primary">
+                    <span className="font-display font-semibold text-primary">
                       {edu.gpa}
                     </span>
                   </div>
 
                   {/* Highlights */}
                   <div className="space-y-2 pt-2">
-                    <h4 className="font-body font-semibold text-foreground">
+                    <h4 className="font-display font-semibold text-foreground">
                       Highlights:
                     </h4>
                     <ul className="space-y-2">
@@ -124,7 +110,7 @@ export const EducationPage = () => {
                     </ul>
                   </div>
                 </div>
-              </ScrapbookCard>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -134,9 +120,9 @@ export const EducationPage = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
-          className="text-center p-6 bg-accent/10 rounded-2xl border-2 border-accent/30"
+          className="text-center p-6 bg-accent/20 rounded-3xl border-2 border-accent/30"
         >
-          <p className="text-lg font-elegant text-primary">
+          <p className="text-lg font-cursive text-primary">
             Studying Cyber Security, building AI, and lowkey taking over the digital world 😏🚀
           </p>
         </motion.div>

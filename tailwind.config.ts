@@ -47,6 +47,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Adventure Time custom colors
+        lavender: "hsl(var(--lavender))",
+        pink: "hsl(var(--pink))",
+        "sky-blue": "hsl(var(--sky-blue))",
+        "sunset-pink": "hsl(var(--sunset-pink))",
+        "mountain-purple": "hsl(var(--mountain-purple))",
+        "grass-teal": "hsl(var(--grass-teal))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -63,6 +70,16 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      borderWidth: {
+        '3': '3px',
+      },
+      fontFamily: {
+        'title': ['Bangers', 'cursive'],
+        'display': ['Fredoka', 'sans-serif'],
+        'body': ['Comic Neue', 'cursive'],
+        'cursive': ['Indie Flower', 'cursive'],
+        'handwriting': ['Patrick Hand', 'cursive'],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -73,20 +90,12 @@ export default {
           to: { height: "0" },
         },
         "float": {
-          "0%, 100%": { transform: "translateY(0px) rotate(-2deg)" },
-          "50%": { transform: "translateY(-10px) rotate(2deg)" },
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
         },
         "wiggle": {
-          "0%, 100%": { transform: "rotate(-3deg)" },
-          "50%": { transform: "rotate(3deg)" },
-        },
-        "slide-in": {
-          "0%": { transform: "translateX(100%)", opacity: "0" },
-          "100%": { transform: "translateX(0)", opacity: "1" },
-        },
-        "slide-out": {
-          "0%": { transform: "translateX(0)", opacity: "1" },
-          "100%": { transform: "translateX(-100%)", opacity: "0" },
+          "0%, 100%": { transform: "rotate(-2deg)" },
+          "50%": { transform: "rotate(2deg)" },
         },
         "bounce-soft": {
           "0%, 100%": { transform: "translateY(0)" },
@@ -100,23 +109,15 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "float": "float 3s ease-in-out infinite",
-        "wiggle": "wiggle 1s ease-in-out infinite",
-        "slide-in": "slide-in 0.5s ease-out",
-        "slide-out": "slide-out 0.5s ease-in",
+        "float": "float 4s ease-in-out infinite",
+        "wiggle": "wiggle 3s ease-in-out infinite",
         "bounce-soft": "bounce-soft 2s ease-in-out infinite",
         "spin-slow": "spin-slow 8s linear infinite",
       },
-      fontFamily: {
-        'handwriting': ['Caveat', 'cursive'],
-        'display': ['Quicksand', 'sans-serif'],
-        'elegant': ['Playfair Display', 'serif'],
-        'body': ['Cormorant Garamond', 'serif'],
-      },
       boxShadow: {
-        'scrapbook': '4px 4px 0px rgba(0,0,0,0.1), 8px 8px 0px rgba(0,0,0,0.05)',
-        'sticker': '2px 4px 8px rgba(0,0,0,0.15)',
-        'paper': '0 8px 16px rgba(0,0,0,0.1)',
+        'adventure': '4px 4px 0px rgba(0,0,0,0.1), 8px 8px 0px rgba(0,0,0,0.05)',
+        'soft': '0 10px 40px rgba(139, 92, 246, 0.15)',
+        'glow': '0 0 30px rgba(147, 197, 253, 0.3)',
       },
     },
   },
