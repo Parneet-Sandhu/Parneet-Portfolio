@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-workspace.png";
 import { Button } from "@/components/ui/button";
-import { Sparkles, ArrowRight } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 interface HeroPageProps {
   onNavigate: (page: number) => void;
@@ -9,54 +9,27 @@ interface HeroPageProps {
 
 export const HeroPage = ({ onNavigate }: HeroPageProps) => {
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 overflow-hidden relative">
+    <div className="min-h-screen flex items-center justify-center p-6 pt-20">
       <div className="container max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Image with adventure style frame */}
+          {/* Left side - Image with frame and social icons */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="relative order-2 lg:order-1"
+            transition={{ duration: 0.6 }}
+            className="space-y-6"
           >
-            {/* Adventure style frame */}
-            <div className="relative">
-              <motion.div
-                className="bg-card rounded-3xl border-4 border-foreground/10 overflow-hidden shadow-adventure"
-                animate={{ rotate: [-1, 1, -1] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <img
-                  src={heroImage}
-                  alt="Parneet's creative workspace"
-                  className="w-full h-auto"
-                />
-              </motion.div>
-              
-              {/* Floating decorations */}
-              <motion.div 
-                className="absolute -top-4 -right-4 text-4xl"
-                animate={{ y: [-5, 5, -5] }}
-                transition={{ duration: 3, repeat: Infinity }}
-              >
-                ✨
-              </motion.div>
-              <motion.div 
-                className="absolute -bottom-4 -left-4 text-4xl"
-                animate={{ y: [5, -5, 5] }}
-                transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
-              >
-                🌸
-              </motion.div>
+            {/* Image frame - rounded corners like reference */}
+            <div className="bg-card rounded-2xl p-3 inline-block">
+              <img
+                src={heroImage}
+                alt="Parneet's creative workspace"
+                className="w-full max-w-md h-auto rounded-xl"
+              />
             </div>
 
-            {/* Social Media Icons */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1 }}
-              className="flex gap-4 mt-8 justify-center lg:justify-start"
-            >
+            {/* Social Media Icons - black circles */}
+            <div className="flex gap-4">
               <a 
                 href="https://github.com/Parneet-Sandhu" 
                 className="social-icon"
@@ -102,68 +75,48 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
                   <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.358"/>
                 </svg>
               </a>
-            </motion.div>
+            </div>
           </motion.div>
 
-          {/* Right side - Text content */}
+          {/* Right side - Text content matching reference exactly */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-6 order-1 lg:order-2"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-4"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-            >
-              <h1 className="text-5xl md:text-7xl font-title text-primary leading-tight tracking-wide">
-                Hey! It's Parneet Kaur Sandhu
-              </h1>
-            </motion.div>
+            {/* Main title - marker/handwritten style, purple */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-marker text-primary leading-tight">
+              Hey! It's Parneet Kaur Sandhu
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="text-xl md:text-2xl font-cursive text-secondary"
-            >
+            {/* Subtitle - script font, pink/salmon */}
+            <p className="text-xl md:text-2xl font-script text-secondary">
               welcome everyone
-            </motion.p>
+            </p>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="text-lg md:text-xl font-body text-foreground leading-relaxed"
-            >
+            {/* Body text - typewriter style */}
+            <p className="text-base md:text-lg font-typewriter text-foreground leading-relaxed">
               Hi, I'm Parneet Kaur Sandhu, AI Engineer, CSE student, and full-time curious human from Bathinda, Punjab.
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
-              className="flex flex-wrap gap-4 pt-4"
-            >
+            {/* Buttons */}
+            <div className="flex flex-wrap gap-4 pt-4">
               <Button 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-display text-lg gap-2 rounded-full px-8 shadow-soft"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-typewriter gap-2 rounded-lg"
                 onClick={() => onNavigate(1)}
               >
-                <Sparkles className="w-5 h-5" />
+                <Sparkles className="w-4 h-4" />
                 Explore
-                <ArrowRight className="w-5 h-5" />
               </Button>
               <Button 
-                size="lg" 
                 variant="outline"
-                className="font-display text-lg border-3 border-foreground/20 hover:bg-accent/30 rounded-full px-8"
+                className="font-typewriter border-2 border-foreground/30 hover:bg-card rounded-lg"
                 onClick={() => onNavigate(9)}
               >
                 Get in Touch
               </Button>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>

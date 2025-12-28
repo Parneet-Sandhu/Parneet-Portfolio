@@ -22,108 +22,82 @@ export const EducationPage = () => {
       period: "Aug 2021 – Jun 2025",
       gpa: "7.93 CGPA",
       highlights: [
-        "Relevant Coursework: Data Structures and Algorithms, Machine Learning, Database Management Systems, Data Mining, Operating Systems, Artificial Intelligence, Soft Computing, Object Oriented Programming, Theory of Computation, Computer Networks",
+        "Relevant Coursework: Data Structures, Machine Learning, Database Management, Data Mining, OS, AI, Computer Networks",
         "Strong foundation in both theoretical concepts and practical applications",
       ],
     },
   ];
 
   return (
-    <div className="min-h-screen p-4 md:p-8">
-      <div className="container max-w-5xl mx-auto space-y-8">
+    <div className="min-h-screen p-6 pt-24">
+      <div className="container max-w-4xl mx-auto space-y-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center space-y-4"
+          className="text-center space-y-2"
         >
-          <h2 className="text-5xl md:text-6xl font-title text-primary tracking-wide flex items-center justify-center gap-3">
-            <GraduationCap className="w-12 h-12" />
-            Education 
-          </h2>
-          <p className="text-xl font-cursive text-secondary">
-            My academic journey and learning path
+          <div className="flex items-center justify-center gap-3">
+            <GraduationCap className="w-10 h-10 text-primary" />
+            <h2 className="text-4xl md:text-5xl font-marker text-primary">Education</h2>
+          </div>
+          <p className="text-lg font-script text-secondary">
+            My academic journey
           </p>
         </motion.div>
 
-        {/* Education Timeline */}
+        {/* Education Cards */}
         <div className="space-y-6">
           {education.map((edu, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 + index * 0.2 }}
-              className="relative"
+              transition={{ delay: 0.2 + index * 0.1 }}
+              className="section-card space-y-4"
             >
-              <div className="section-card">
-                <div className="space-y-4">
-                  {/* Degree and Period */}
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
-                    <div>
-                      <h3 className="text-2xl md:text-3xl font-title text-primary">
-                        {edu.degree}
-                      </h3>
-                      <p className="text-xl font-display font-semibold text-secondary">
-                        {edu.major}
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
-                      <span className="text-sm font-display font-semibold text-primary">
-                        {edu.period}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Institution */}
-                  <div className="flex items-center gap-2 text-lg text-foreground">
-                    <BookOpen className="w-5 h-5 text-accent" />
-                    <span className="font-body">{edu.institution}</span>
-                  </div>
-
-                  {/* GPA */}
-                  <div className="flex items-center gap-2">
-                    <Award className="w-5 h-5 text-primary" />
-                    <span className="font-display font-semibold text-primary">
-                      {edu.gpa}
-                    </span>
-                  </div>
-
-                  {/* Highlights */}
-                  <div className="space-y-2 pt-2">
-                    <h4 className="font-display font-semibold text-foreground">
-                      Highlights:
-                    </h4>
-                    <ul className="space-y-2">
-                      {edu.highlights.map((highlight, idx) => (
-                        <motion.li
-                          key={idx}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: 0.4 + index * 0.2 + idx * 0.1 }}
-                          className="flex items-start gap-2 text-foreground font-body"
-                        >
-                          <span className="text-primary mt-1">✦</span>
-                          <span>{highlight}</span>
-                        </motion.li>
-                      ))}
-                    </ul>
-                  </div>
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
+                <div>
+                  <h3 className="text-2xl font-marker text-primary">{edu.degree}</h3>
+                  <p className="text-lg font-typewriter text-secondary">{edu.major}</p>
                 </div>
+                <span className="tag-pill whitespace-nowrap">{edu.period}</span>
+              </div>
+
+              <div className="flex items-center gap-2 font-typewriter">
+                <BookOpen className="w-4 h-4 text-muted-foreground" />
+                <span>{edu.institution}</span>
+              </div>
+
+              <div className="flex items-center gap-2 font-typewriter text-primary">
+                <Award className="w-4 h-4" />
+                <span className="font-semibold">{edu.gpa}</span>
+              </div>
+
+              <div className="space-y-2">
+                <h4 className="font-typewriter font-semibold">Highlights:</h4>
+                <ul className="space-y-1">
+                  {edu.highlights.map((highlight, idx) => (
+                    <li key={idx} className="flex items-start gap-2 font-typewriter text-sm">
+                      <span className="text-primary mt-1">•</span>
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Additional Info */}
+        {/* Footer */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          className="text-center p-6 bg-accent/20 rounded-3xl border-2 border-accent/30"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="text-center p-4 bg-secondary/10 rounded-lg"
         >
-          <p className="text-lg font-cursive text-primary">
-            Studying Cyber Security, building AI, and lowkey taking over the digital world 😏🚀
+          <p className="font-script text-primary">
+            Studying Cyber Security, building AI, and lowkey taking over the digital world
           </p>
         </motion.div>
       </div>
