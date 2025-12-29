@@ -32,18 +32,18 @@ export const SkillsPage = () => {
   ];
 
   return (
-    <div className="min-h-screen p-6 pt-24">
-      <div className="container max-w-5xl mx-auto space-y-8">
+    <div className="min-h-screen p-6 pt-24 mountains-bg">
+      <div className="container max-w-5xl mx-auto space-y-8 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-2"
         >
-          <h2 className="text-4xl md:text-5xl font-marker text-primary">
+          <h2 className="text-4xl md:text-5xl adventure-title">
             Skills & Tech Stack
           </h2>
-          <p className="text-lg font-script text-secondary">
+          <p className="text-lg adventure-subtitle">
             My toolbox of technologies
           </p>
         </motion.div>
@@ -62,7 +62,7 @@ export const SkillsPage = () => {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Icon className="w-6 h-6 text-primary" />
-                  <h3 className="text-xl font-marker text-primary">{category.title}</h3>
+                  <h3 className="text-xl font-cartoon text-primary">{category.title}</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
@@ -81,7 +81,7 @@ export const SkillsPage = () => {
           transition={{ delay: 0.5 }}
           className="section-card"
         >
-          <h3 className="text-2xl font-marker text-primary mb-4 text-center">
+          <h3 className="text-2xl font-cartoon text-primary mb-4 text-center">
             Data Science & AI Expertise
           </h3>
           <div className="flex flex-wrap gap-2 justify-center">
@@ -96,9 +96,9 @@ export const SkillsPage = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="text-center p-4 bg-secondary/10 rounded-lg"
+          className="text-center p-4 bg-secondary/10 rounded-xl"
         >
-          <p className="font-script text-primary">
+          <p className="font-display font-semibold text-primary">
             Always learning! Currently mastering Cyber Security
           </p>
         </motion.div>

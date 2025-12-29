@@ -51,16 +51,16 @@ export const InterestsPage = () => {
   ];
 
   return (
-    <div className="min-h-screen p-6 pt-24">
-      <div className="container max-w-5xl mx-auto space-y-8">
+    <div className="min-h-screen p-6 pt-24 mountains-bg">
+      <div className="container max-w-5xl mx-auto space-y-8 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-2"
         >
-          <h2 className="text-4xl md:text-5xl font-marker text-primary">My Interests</h2>
-          <p className="text-lg font-script text-secondary">
+          <h2 className="text-4xl md:text-5xl adventure-title">My Interests</h2>
+          <p className="text-lg adventure-subtitle">
             Beyond the code - what makes me, me!
           </p>
         </motion.div>
@@ -79,9 +79,9 @@ export const InterestsPage = () => {
               >
                 <div className="flex items-center gap-3 mb-3">
                   <Icon className="w-6 h-6 text-primary" />
-                  <h3 className="text-xl font-marker text-primary">{interest.title}</h3>
+                  <h3 className="text-xl font-cartoon text-primary">{interest.title}</h3>
                 </div>
-                <p className="font-typewriter text-sm mb-3">{interest.description}</p>
+                <p className="font-body text-sm mb-3">{interest.description}</p>
                 <div className="flex flex-wrap gap-1">
                   {interest.tags.map((tag) => (
                     <span key={tag} className="tag-pill text-xs">{tag}</span>
@@ -99,12 +99,12 @@ export const InterestsPage = () => {
           transition={{ delay: 0.4 }}
           className="section-card"
         >
-          <h3 className="text-2xl font-marker text-primary mb-4 text-center">Fun Facts About Me</h3>
+          <h3 className="text-2xl font-cartoon text-primary mb-4 text-center">Fun Facts About Me</h3>
           <div className="grid md:grid-cols-2 gap-3">
             {funFacts.map((fact, index) => (
-              <div key={index} className="flex items-start gap-2 p-3 bg-card rounded-lg border border-foreground/10">
+              <div key={index} className="flex items-start gap-2 p-3 bg-card rounded-xl border border-border/50">
                 <span className="text-primary">★</span>
-                <p className="font-typewriter text-sm">{fact}</p>
+                <p className="font-body text-sm">{fact}</p>
               </div>
             ))}
           </div>
@@ -115,9 +115,9 @@ export const InterestsPage = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="text-center p-4 bg-secondary/10 rounded-lg"
+          className="text-center p-4 bg-secondary/10 rounded-xl"
         >
-          <p className="font-script text-primary italic">
+          <p className="font-display font-semibold text-primary italic">
             "Life is about balance - code hard, play harder!"
           </p>
         </motion.div>

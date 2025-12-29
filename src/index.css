@@ -2,108 +2,175 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Adventure Time Theme - Exact Match */
+/* Adventure Time Theme */
 
 @layer base {
   :root {
-    /* Exact colors from reference */
-    --background: 240 10% 80%;  /* Gray lavender #C8C4D4 */
-    --foreground: 260 30% 35%;  /* Dark purple text */
+    /* Adventure Time pastel palette */
+    --background: 270 30% 85%; /* Soft lavender */
+    --foreground: 260 40% 25%; /* Dark purple text */
 
-    --card: 240 15% 88%;  /* Lighter gray for cards */
-    --card-foreground: 260 30% 35%;
+    --card: 280 25% 90%; /* Light lavender card */
+    --card-foreground: 260 40% 25%;
 
-    --popover: 240 15% 88%;
-    --popover-foreground: 260 30% 35%;
+    --popover: 280 25% 90%;
+    --popover-foreground: 260 40% 25%;
 
-    --primary: 270 45% 50%;  /* Purple for headings */
+    --primary: 280 50% 45%; /* Adventure purple */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 350 60% 70%;  /* Pink/salmon for subtitle */
-    --secondary-foreground: 260 30% 35%;
+    --secondary: 340 65% 65%; /* Adventure pink */
+    --secondary-foreground: 260 40% 25%;
 
-    --muted: 240 10% 70%;
-    --muted-foreground: 260 25% 45%;
+    --muted: 270 20% 75%;
+    --muted-foreground: 260 30% 40%;
 
-    --accent: 200 50% 75%;
-    --accent-foreground: 260 30% 35%;
+    --accent: 195 70% 70%; /* Adventure sky blue */
+    --accent-foreground: 260 40% 25%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 260 15% 70%;
-    --input: 260 15% 75%;
-    --ring: 270 45% 50%;
+    --border: 270 25% 70%;
+    --input: 270 20% 80%;
+    --ring: 280 50% 45%;
 
-    --radius: 1rem;
+    --radius: 1.25rem;
 
-    --sidebar-background: 240 15% 88%;
-    --sidebar-foreground: 260 30% 35%;
-    --sidebar-primary: 270 45% 50%;
+    --sidebar-background: 280 25% 90%;
+    --sidebar-foreground: 260 40% 25%;
+    --sidebar-primary: 280 50% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 350 60% 80%;
-    --sidebar-accent-foreground: 260 30% 35%;
-    --sidebar-border: 260 15% 75%;
-    --sidebar-ring: 270 45% 50%;
+    --sidebar-accent: 340 60% 75%;
+    --sidebar-accent-foreground: 260 40% 25%;
+    --sidebar-border: 270 25% 75%;
+    --sidebar-ring: 280 50% 45%;
+
+    /* Adventure Time special colors */
+    --adventure-grass: 120 45% 55%;
+    --adventure-sky: 195 80% 75%;
+    --adventure-sunset: 30 90% 70%;
   }
 
   .dark {
-    --background: 260 25% 18%;
-    --foreground: 240 15% 90%;
+    --background: 260 30% 12%;
+    --foreground: 270 20% 90%;
 
-    --card: 260 20% 22%;
-    --card-foreground: 240 15% 90%;
+    --card: 260 25% 16%;
+    --card-foreground: 270 20% 90%;
 
-    --popover: 260 20% 22%;
-    --popover-foreground: 240 15% 90%;
+    --popover: 260 25% 16%;
+    --popover-foreground: 270 20% 90%;
 
-    --primary: 270 50% 65%;
-    --primary-foreground: 260 25% 18%;
+    --primary: 280 55% 60%;
+    --primary-foreground: 260 30% 12%;
 
-    --secondary: 350 50% 65%;
-    --secondary-foreground: 240 15% 90%;
+    --secondary: 340 50% 60%;
+    --secondary-foreground: 270 20% 90%;
 
-    --muted: 260 20% 30%;
-    --muted-foreground: 240 15% 70%;
+    --muted: 260 25% 22%;
+    --muted-foreground: 270 15% 65%;
 
-    --accent: 200 45% 55%;
-    --accent-foreground: 240 15% 90%;
+    --accent: 195 55% 50%;
+    --accent-foreground: 270 20% 90%;
 
-    --destructive: 0 62.8% 50%;
-    --destructive-foreground: 240 15% 90%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 270 20% 90%;
 
-    --border: 260 20% 30%;
-    --input: 260 20% 25%;
-    --ring: 270 50% 65%;
+    --border: 260 25% 25%;
+    --input: 260 25% 20%;
+    --ring: 280 55% 60%;
 
-    --sidebar-background: 260 20% 20%;
-    --sidebar-foreground: 240 15% 90%;
-    --sidebar-primary: 270 50% 65%;
-    --sidebar-primary-foreground: 260 25% 18%;
-    --sidebar-accent: 260 20% 25%;
-    --sidebar-accent-foreground: 240 15% 90%;
-    --sidebar-border: 260 20% 25%;
-    --sidebar-ring: 270 50% 65%;
+    --sidebar-background: 260 25% 14%;
+    --sidebar-foreground: 270 20% 90%;
+    --sidebar-primary: 280 55% 60%;
+    --sidebar-primary-foreground: 260 30% 12%;
+    --sidebar-accent: 260 25% 20%;
+    --sidebar-accent-foreground: 270 20% 90%;
+    --sidebar-border: 260 25% 22%;
+    --sidebar-ring: 280 55% 60%;
   }
 }
 
 @layer utilities {
+  /* Adventure Time gradient backgrounds */
+  .adventure-bg {
+    @apply relative overflow-hidden;
+    background: linear-gradient(
+      180deg,
+      hsl(var(--accent)) 0%,
+      hsl(var(--background)) 40%,
+      hsl(var(--background)) 100%
+    );
+  }
+
+  .adventure-bg::before {
+    content: '';
+    @apply absolute bottom-0 left-0 right-0;
+    height: 200px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 200'%3E%3Cpath fill='%237cb342' d='M0,160L48,149.3C96,139,192,117,288,112C384,107,480,117,576,138.7C672,160,768,192,864,192C960,192,1056,160,1152,144C1248,128,1344,128,1392,128L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'/%3E%3C/svg%3E") no-repeat bottom;
+    background-size: cover;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  /* Mountain silhouettes */
+  .mountains-bg {
+    @apply relative;
+  }
+
+  .mountains-bg::after {
+    content: '';
+    @apply absolute bottom-0 left-0 right-0 pointer-events-none;
+    height: 150px;
+    background: 
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 150'%3E%3Cpath fill='%238b7ba8' opacity='0.6' d='M0,100 L120,60 L240,90 L360,40 L480,80 L600,30 L720,70 L840,45 L960,85 L1080,35 L1200,75 L1320,50 L1440,95 L1440,150 L0,150 Z'/%3E%3Cpath fill='%239d8fbd' opacity='0.4' d='M0,120 L180,80 L360,110 L540,70 L720,100 L900,60 L1080,90 L1260,75 L1440,110 L1440,150 L0,150 Z'/%3E%3C/svg%3E") no-repeat bottom;
+    background-size: cover;
+  }
+
   .social-icon {
-    @apply w-12 h-12 bg-foreground text-background rounded-full flex items-center justify-center;
-    @apply hover:scale-110 transition-transform;
+    @apply w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300;
+    background: hsl(var(--foreground));
+    color: hsl(var(--background));
+  }
+
+  .social-icon:hover {
+    @apply scale-110;
+    background: hsl(var(--primary));
   }
 
   .nav-button {
-    @apply px-4 py-2 rounded-lg border-2 border-foreground/30 flex items-center gap-2;
-    @apply hover:bg-card transition-colors font-typewriter;
+    @apply px-5 py-2.5 rounded-xl flex items-center gap-2 font-display font-semibold;
+    @apply border-2 transition-all duration-200;
+    border-color: hsl(var(--border));
+    background: hsl(var(--card));
+  }
+
+  .nav-button:hover {
+    background: hsl(var(--muted));
   }
 
   .section-card {
-    @apply bg-card/60 backdrop-blur-sm rounded-2xl border border-foreground/10 p-6 md:p-8;
+    @apply rounded-2xl p-6 md:p-8 backdrop-blur-sm;
+    background: hsl(var(--card) / 0.7);
+    border: 2px solid hsl(var(--border) / 0.5);
   }
 
   .tag-pill {
-    @apply px-3 py-1 bg-card border border-foreground/20 rounded-full font-typewriter text-sm;
+    @apply px-4 py-1.5 rounded-full font-display text-sm font-medium;
+    background: hsl(var(--muted));
+    border: 1px solid hsl(var(--border));
+  }
+
+  .adventure-title {
+    @apply font-cartoon tracking-wide;
+    color: hsl(var(--primary));
+    text-shadow: 2px 2px 0 hsl(var(--secondary) / 0.3);
+  }
+
+  .adventure-subtitle {
+    @apply font-display font-semibold;
+    color: hsl(var(--secondary));
   }
 }
 
@@ -113,6 +180,10 @@
   }
 
   body {
-    @apply bg-background text-foreground font-typewriter;
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3 {
+    @apply font-cartoon;
   }
 }

@@ -60,8 +60,8 @@ export const ExperiencePage = () => {
   ];
 
   return (
-    <div className="min-h-screen p-6 pt-24">
-      <div className="container max-w-4xl mx-auto space-y-8">
+    <div className="min-h-screen p-6 pt-24 mountains-bg">
+      <div className="container max-w-4xl mx-auto space-y-8 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -70,9 +70,9 @@ export const ExperiencePage = () => {
         >
           <div className="flex items-center justify-center gap-3">
             <Briefcase className="w-10 h-10 text-primary" />
-            <h2 className="text-4xl md:text-5xl font-marker text-primary">Experience</h2>
+            <h2 className="text-4xl md:text-5xl adventure-title">Experience</h2>
           </div>
-          <p className="text-lg font-script text-secondary">
+          <p className="text-lg adventure-subtitle">
             Where I've worked and what I've built
           </p>
         </motion.div>
@@ -88,8 +88,8 @@ export const ExperiencePage = () => {
               className="section-card space-y-4"
             >
               <div>
-                <h3 className="text-2xl font-marker text-primary">{exp.role}</h3>
-                <p className="text-lg font-typewriter text-secondary">{exp.company}</p>
+                <h3 className="text-2xl font-cartoon text-primary">{exp.role}</h3>
+                <p className="text-lg font-display font-semibold text-secondary">{exp.company}</p>
               </div>
 
               <div className="flex flex-wrap gap-3 text-sm">
@@ -103,13 +103,13 @@ export const ExperiencePage = () => {
                 </span>
               </div>
 
-              <p className="font-typewriter">{exp.description}</p>
+              <p className="font-body">{exp.description}</p>
 
               <div className="space-y-2">
-                <h4 className="font-typewriter font-semibold">Key Achievements:</h4>
+                <h4 className="font-display font-semibold">Key Achievements:</h4>
                 <ul className="space-y-1">
                   {exp.achievements.map((achievement, idx) => (
-                    <li key={idx} className="flex items-start gap-2 font-typewriter text-sm">
+                    <li key={idx} className="flex items-start gap-2 font-body text-sm">
                       <span className="text-primary mt-1">★</span>
                       <span>{achievement}</span>
                     </li>
@@ -131,9 +131,9 @@ export const ExperiencePage = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="text-center p-4 bg-primary/10 rounded-lg"
+          className="text-center p-4 bg-primary/10 rounded-xl"
         >
-          <p className="font-script text-primary">
+          <p className="font-display font-semibold text-primary">
             Always open to new opportunities and exciting projects!
           </p>
         </motion.div>

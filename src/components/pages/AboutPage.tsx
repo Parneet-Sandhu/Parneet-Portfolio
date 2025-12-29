@@ -10,18 +10,18 @@ export const AboutPage = () => {
   ];
 
   return (
-    <div className="min-h-screen p-6 pt-24">
-      <div className="container max-w-4xl mx-auto space-y-8">
+    <div className="min-h-screen p-6 pt-24 mountains-bg">
+      <div className="container max-w-4xl mx-auto space-y-8 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-2"
         >
-          <h2 className="text-4xl md:text-5xl font-marker text-primary">
+          <h2 className="text-4xl md:text-5xl adventure-title">
             About Me
           </h2>
-          <p className="text-lg font-script text-secondary">
+          <p className="text-lg adventure-subtitle">
             I fix problems you didn't know existed
           </p>
         </motion.div>
@@ -35,10 +35,10 @@ export const AboutPage = () => {
         >
           <div className="flex items-center gap-2 text-primary">
             <Sparkles className="w-6 h-6" />
-            <h3 className="text-2xl font-marker">Hey there!</h3>
+            <h3 className="text-2xl font-cartoon">Hey there!</h3>
           </div>
           
-          <div className="space-y-4 font-typewriter text-foreground leading-relaxed">
+          <div className="space-y-4 font-body text-foreground leading-relaxed">
             <p>
               I'm Parneet Kaur Sandhu, your friendly AI engineer from Bathinda, Punjab. Currently vibing my way through M.Tech CSE in Cyber Security at the Central University of Punjab (2025).
             </p>
@@ -52,7 +52,7 @@ export const AboutPage = () => {
 
           {/* Traits */}
           <div className="space-y-3">
-            <h4 className="text-xl font-marker text-primary">What makes me, me?</h4>
+            <h4 className="text-xl font-cartoon text-primary">What makes me, me?</h4>
             <div className="flex flex-wrap gap-2">
               {["AI Enthusiast", "Problem Solver", "Team Player", "Fast Learner", "Detail-Oriented"].map((trait) => (
                 <span key={trait} className="tag-pill">
@@ -67,18 +67,18 @@ export const AboutPage = () => {
             {interests.map((interest) => {
               const Icon = interest.icon;
               return (
-                <div key={interest.text} className="flex items-center gap-3 p-3 bg-card rounded-lg border border-foreground/10">
+                <div key={interest.text} className="flex items-center gap-3 p-3 bg-card rounded-xl border border-border/50">
                   <Icon className="w-5 h-5 text-primary" />
-                  <span className="font-typewriter">{interest.text}</span>
+                  <span className="font-body font-medium">{interest.text}</span>
                 </div>
               );
             })}
           </div>
 
           {/* Fun Fact */}
-          <div className="p-4 bg-secondary/10 rounded-lg border-l-4 border-primary">
-            <p className="font-typewriter">
-              <span className="font-marker text-primary">Fun Fact:</span> I've reduced token costs by 40% while maintaining 90% accuracy in RAG systems!
+          <div className="p-4 bg-secondary/10 rounded-xl border-l-4 border-primary">
+            <p className="font-body">
+              <span className="font-cartoon text-primary">Fun Fact:</span> I've reduced token costs by 40% while maintaining 90% accuracy in RAG systems!
             </p>
           </div>
         </motion.div>
@@ -90,7 +90,7 @@ export const AboutPage = () => {
           transition={{ delay: 0.4 }}
           className="text-center"
         >
-          <blockquote className="text-xl font-script text-secondary italic">
+          <blockquote className="text-xl font-display font-semibold text-secondary italic">
             "Trust me, I'm an Engineer… most days."
           </blockquote>
         </motion.div>

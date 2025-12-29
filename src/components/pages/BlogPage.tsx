@@ -25,8 +25,8 @@ export const BlogPage = () => {
   ];
 
   return (
-    <div className="min-h-screen p-6 pt-24">
-      <div className="container max-w-4xl mx-auto space-y-8">
+    <div className="min-h-screen p-6 pt-24 mountains-bg">
+      <div className="container max-w-4xl mx-auto space-y-8 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -35,9 +35,9 @@ export const BlogPage = () => {
         >
           <div className="flex items-center justify-center gap-3">
             <BookOpen className="w-10 h-10 text-primary" />
-            <h2 className="text-4xl md:text-5xl font-marker text-primary">My Blog</h2>
+            <h2 className="text-4xl md:text-5xl adventure-title">My Blog</h2>
           </div>
-          <p className="text-lg font-script text-secondary">
+          <p className="text-lg adventure-subtitle">
             Sharing my thoughts on Medium
           </p>
         </motion.div>
@@ -62,11 +62,11 @@ export const BlogPage = () => {
 
               <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                 <Calendar className="w-4 h-4" />
-                <span className="font-typewriter">{blog.date}</span>
+                <span className="font-body">{blog.date}</span>
               </div>
 
-              <h3 className="text-lg font-marker text-primary mb-2">{blog.title}</h3>
-              <p className="font-typewriter text-sm mb-3">{blog.description}</p>
+              <h3 className="text-lg font-cartoon text-primary mb-2">{blog.title}</h3>
+              <p className="font-body text-sm mb-3">{blog.description}</p>
 
               <div className="flex flex-wrap gap-1 mb-4">
                 {blog.tags.map((tag) => (
@@ -77,7 +77,7 @@ export const BlogPage = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className="w-full gap-2 font-typewriter border-foreground/20"
+                className="w-full gap-2 font-display font-semibold border-border"
                 asChild
               >
                 <a href={blog.link} target="_blank" rel="noopener noreferrer">
@@ -94,9 +94,9 @@ export const BlogPage = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="text-center p-4 bg-secondary/10 rounded-lg"
+          className="text-center p-4 bg-secondary/10 rounded-xl"
         >
-          <p className="font-script text-primary">More articles coming soon!</p>
+          <p className="font-display font-semibold text-primary">More articles coming soon!</p>
         </motion.div>
       </div>
     </div>

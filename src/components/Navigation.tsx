@@ -24,14 +24,15 @@ export const Navigation = ({ currentPage, setCurrentPage }: NavigationProps) => 
   const totalPages = pages.length;
   
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm border-b border-border/30">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo - handwritten style */}
+          {/* Logo - cartoon style */}
           <motion.h1 
-            className="text-2xl md:text-3xl font-marker text-foreground"
+            className="text-2xl md:text-3xl font-cartoon text-primary"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
+            style={{ textShadow: '1px 1px 0 hsl(var(--secondary) / 0.3)' }}
           >
             Parneet's Lab
           </motion.h1>
@@ -41,10 +42,10 @@ export const Navigation = ({ currentPage, setCurrentPage }: NavigationProps) => 
             <motion.button
               onClick={() => setCurrentPage(Math.max(0, currentPage - 1))}
               disabled={currentPage === 0}
-              className="w-8 h-8 flex items-center justify-center disabled:opacity-30 hover:bg-card rounded transition-colors"
+              className="w-9 h-9 flex items-center justify-center disabled:opacity-30 hover:bg-card rounded-lg transition-colors font-display font-bold text-lg"
               whileTap={{ scale: 0.95 }}
             >
-              <span className="font-typewriter">←</span>
+              ←
             </motion.button>
             
             <button 
@@ -58,10 +59,10 @@ export const Navigation = ({ currentPage, setCurrentPage }: NavigationProps) => 
             <motion.button
               onClick={() => setCurrentPage(Math.min(totalPages - 1, currentPage + 1))}
               disabled={currentPage === totalPages - 1}
-              className="w-8 h-8 flex items-center justify-center disabled:opacity-30 hover:bg-card rounded transition-colors"
+              className="w-9 h-9 flex items-center justify-center disabled:opacity-30 hover:bg-card rounded-lg transition-colors font-display font-bold text-lg"
               whileTap={{ scale: 0.95 }}
             >
-              <span className="font-typewriter">→</span>
+              →
             </motion.button>
           </div>
         </div>
