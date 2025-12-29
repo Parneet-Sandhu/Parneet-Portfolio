@@ -98,16 +98,16 @@ export const ProjectsPage = () => {
   ];
 
   return (
-    <div className="min-h-screen p-6 pt-24">
-      <div className="container max-w-5xl mx-auto space-y-8">
+    <div className="min-h-screen p-6 pt-24 mountains-bg">
+      <div className="container max-w-5xl mx-auto space-y-8 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-2"
         >
-          <h2 className="text-4xl md:text-5xl font-marker text-primary">Projects</h2>
-          <p className="text-lg font-script text-secondary">
+          <h2 className="text-4xl md:text-5xl adventure-title">Projects</h2>
+          <p className="text-lg adventure-subtitle">
             Things I've built with code and creativity
           </p>
         </motion.div>
@@ -134,8 +134,8 @@ export const ProjectsPage = () => {
                 </span>
               </div>
 
-              <h3 className="text-xl font-marker text-primary mb-2">{project.title}</h3>
-              <p className="font-typewriter text-sm mb-3">{project.description}</p>
+              <h3 className="text-xl font-cartoon text-primary mb-2">{project.title}</h3>
+              <p className="font-body text-sm mb-3">{project.description}</p>
 
               <div className="flex flex-wrap gap-1 mb-4">
                 {project.tech.map((tech) => (
@@ -146,7 +146,7 @@ export const ProjectsPage = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className="w-full gap-2 font-typewriter border-foreground/20"
+                className="w-full gap-2 font-display font-semibold border-border"
                 asChild
               >
                 <a href={project.github} target="_blank" rel="noopener noreferrer">
@@ -163,10 +163,10 @@ export const ProjectsPage = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="text-center p-4 bg-primary/10 rounded-lg"
+          className="text-center p-4 bg-primary/10 rounded-xl"
         >
-          <p className="font-script text-primary mb-3">Want to see more?</p>
-          <Button className="bg-primary font-typewriter gap-2" asChild>
+          <p className="font-display font-semibold text-primary mb-3">Want to see more?</p>
+          <Button className="bg-primary font-display font-semibold gap-2" asChild>
             <a href="https://github.com/Parneet-Sandhu" target="_blank" rel="noopener noreferrer">
               <Github className="w-4 h-4" />
               Visit GitHub

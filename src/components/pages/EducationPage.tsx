@@ -29,8 +29,8 @@ export const EducationPage = () => {
   ];
 
   return (
-    <div className="min-h-screen p-6 pt-24">
-      <div className="container max-w-4xl mx-auto space-y-8">
+    <div className="min-h-screen p-6 pt-24 mountains-bg">
+      <div className="container max-w-4xl mx-auto space-y-8 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -39,9 +39,9 @@ export const EducationPage = () => {
         >
           <div className="flex items-center justify-center gap-3">
             <GraduationCap className="w-10 h-10 text-primary" />
-            <h2 className="text-4xl md:text-5xl font-marker text-primary">Education</h2>
+            <h2 className="text-4xl md:text-5xl adventure-title">Education</h2>
           </div>
-          <p className="text-lg font-script text-secondary">
+          <p className="text-lg adventure-subtitle">
             My academic journey
           </p>
         </motion.div>
@@ -58,27 +58,27 @@ export const EducationPage = () => {
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
                 <div>
-                  <h3 className="text-2xl font-marker text-primary">{edu.degree}</h3>
-                  <p className="text-lg font-typewriter text-secondary">{edu.major}</p>
+                  <h3 className="text-2xl font-cartoon text-primary">{edu.degree}</h3>
+                  <p className="text-lg font-display font-semibold text-secondary">{edu.major}</p>
                 </div>
                 <span className="tag-pill whitespace-nowrap">{edu.period}</span>
               </div>
 
-              <div className="flex items-center gap-2 font-typewriter">
+              <div className="flex items-center gap-2 font-body">
                 <BookOpen className="w-4 h-4 text-muted-foreground" />
                 <span>{edu.institution}</span>
               </div>
 
-              <div className="flex items-center gap-2 font-typewriter text-primary">
+              <div className="flex items-center gap-2 font-display font-semibold text-primary">
                 <Award className="w-4 h-4" />
-                <span className="font-semibold">{edu.gpa}</span>
+                <span>{edu.gpa}</span>
               </div>
 
               <div className="space-y-2">
-                <h4 className="font-typewriter font-semibold">Highlights:</h4>
+                <h4 className="font-display font-semibold">Highlights:</h4>
                 <ul className="space-y-1">
                   {edu.highlights.map((highlight, idx) => (
-                    <li key={idx} className="flex items-start gap-2 font-typewriter text-sm">
+                    <li key={idx} className="flex items-start gap-2 font-body text-sm">
                       <span className="text-primary mt-1">•</span>
                       <span>{highlight}</span>
                     </li>
@@ -94,9 +94,9 @@ export const EducationPage = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="text-center p-4 bg-secondary/10 rounded-lg"
+          className="text-center p-4 bg-secondary/10 rounded-xl"
         >
-          <p className="font-script text-primary">
+          <p className="font-display font-semibold text-primary">
             Studying Cyber Security, building AI, and lowkey taking over the digital world
           </p>
         </motion.div>

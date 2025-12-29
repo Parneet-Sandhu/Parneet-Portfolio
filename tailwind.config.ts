@@ -64,10 +64,10 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        'marker': ['Permanent Marker', 'cursive'],
-        'script': ['Pacifico', 'cursive'],
-        'typewriter': ['Special Elite', 'monospace'],
-        'handwriting': ['Caveat', 'cursive'],
+        'cartoon': ['Bangers', 'cursive'],
+        'display': ['Fredoka', 'sans-serif'],
+        'body': ['Quicksand', 'sans-serif'],
+        'comic': ['Comic Neue', 'cursive'],
       },
       keyframes: {
         "accordion-down": {
